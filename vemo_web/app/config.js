@@ -177,4 +177,48 @@ app.constant('ROUTERS', [{
         "templateUrl": "vemo_web_apps/catalogo_web/views/autores/form.html"
     }
 
+}, {
+    "modelo": {
+        "url": "/modelo",
+        "views": {
+            "": {
+                "templateUrl": "app/views/layout.html"
+            },
+            "aside": {
+                "templateUrl": "app/views/aside.html"
+            },
+            "content": {
+                "templateUrl": "app/views/content.html"
+            }
+        }
+    },
+    "modelo.modelo": {
+        "url": "/modelo",
+        "template": "<div ui-view ></div>"
+    }
+}, {
+    "modelo.modelo.marca": {
+        "url": "/marca",
+        "data": {
+            "section": "Modelo",
+            "page": "marca"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/index.html"
+    },
+    "modelo.modelo.marcaNew": {
+        "url": "/marca/new",
+        "data": {
+            "section": "Modelo",
+            "page": "marca"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
+    },
+    "modelo.modelo.marcaEdit": {
+        "url": "/marca/:id/edit",
+        "data": {
+            "section": "Modelo",
+            "page": "marca"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
+    }
 }]);

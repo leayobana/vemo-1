@@ -108,6 +108,21 @@ app
         }]
     });
 
+
+    sections.push({
+
+        menu: [{
+            title: 'Modelo',
+            type: 'toggle',
+            state: 'modelo.modelo',
+            menu_items: [{
+                title: 'Marca',
+                state: 'modelo.modelo.marca',
+                type: 'link'
+            }, ]
+        },]
+    });
+
     authService.getMenu().then(function(r) {
         menu = r.data;
         console.log("menuService.authService.getMenu():" + JSON.stringify(menu));
