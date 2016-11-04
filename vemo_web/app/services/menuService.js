@@ -119,9 +119,32 @@ app
                 title: 'Marca',
                 state: 'modelo.modelo.marca',
                 type: 'link'
+            }, {
+                title: 'N.motor',
+                state: 'catalogo.catalogo.autores',
+                type: 'link'
             }, ]
         },]
     });
+
+    sections.push({
+
+        menu: [{
+            title: 'PRODUCTOS',
+            type: 'toggle',
+            state: 'catalogo.catalogo',
+            menu_items: [{
+                title: 'MOTOS',
+                state: 'catalogo.catalogo.categorias',
+                type: 'link'
+            }, {
+                title: 'ACCESORIOS',
+                state: 'catalogo.catalogo.autores',
+                type: 'link'
+            }, ]
+        }]
+    });
+
 
     authService.getMenu().then(function(r) {
         menu = r.data;
