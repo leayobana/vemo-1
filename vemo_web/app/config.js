@@ -197,6 +197,32 @@ app.constant('ROUTERS', [{
         "template": "<div ui-view ></div>"
     }
 }, {
+    "modelo.modelo.cliente": {
+        "url": "/cliente",
+        "data": {
+            "section": "Modelo",
+            "page": "cliente"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/cliente/index.html"
+    },
+    "modelo.modelo.clienteNew": {
+        "url": "/cliente/new",
+        "data": {
+            "section": "Modelo",
+            "page": "cliente"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/cliente/form.html"
+    },
+    "modelo.modelo.clienteEdit": {
+        "url": "/cliente/:id/edit",
+        "data": {
+            "section": "Modelo",
+            "page": "cliente"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/cliente/form.html"
+    } , 
+
+    {
     "modelo.modelo.marca": {
         "url": "/marca",
         "data": {

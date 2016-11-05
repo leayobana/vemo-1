@@ -141,6 +141,10 @@ app
                 title: 'ACCESORIOS',
                 state: 'catalogo.catalogo.autores',
                 type: 'link'
+            }, {
+                title: 'Cliente',
+                state: 'modelo.modelo.cliente',
+                type: 'link'
             }, ]
         }]
     });

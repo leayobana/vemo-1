@@ -8,6 +8,10 @@ app
             "update": { method: 'PUT' },
 
         }),
+        Cliente: $resource(url + "cliente/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+
+        }),
         Autor: $resource(url + "autors/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "query": {
