@@ -1,0 +1,148 @@
+CREATE TABLE tipo
+(
+	id                   CHAR(18) NOT NULL,
+	descripcion          CHAR(18) NULL,
+	PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE cronograma_pago
+(
+	id                   CHAR(18) NOT NULL,
+	fechas               CHAR(18) NULL,
+	cuotas               CHAR(18) NULL,
+	monto                CHAR(18) NULL,
+	estado               CHAR(18) NULL,
+	oferta               CHAR(18) NULL,
+	PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE usuario
+(
+	id                   CHAR(18) NOT NULL,
+	nombre               CHAR(18) NULL,
+	contraseña           CHAR(18) NULL,
+	PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE cargo
+(
+	id                   CHAR(18) NOT NULL,
+	nombre               CHAR(18) NULL,
+	estado               CHAR(18) NULL,
+	area                 CHAR(18) NULL,
+	PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE devolucion
+(
+	fecha                CHAR(18) NULL,
+	motivo               CHAR(18) NULL,
+	tipo_documento       CHAR(18) NULL,
+	cliente              CHAR(18) NULL
+);
+
+
+
+CREATE TABLE empleado
+(
+	id                   CHAR(18) NOT NULL,
+	nombre               CHAR(18) NULL,
+	apellido_paterno     CHAR(18) NULL,
+	aoellido_materno     CHAR(18) NULL,
+	fecha_nacimiento     CHAR(18) NULL,
+	DNI                  CHAR(18) NULL,
+	direccion            CHAR(18) NULL,
+	telefono             CHAR(18) NULL,
+	correo               CHAR(18) NULL,
+	PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE pago
+(
+	cantidad             CHAR(18) NULL,
+	monto                CHAR(18) NULL,
+	tipo                 CHAR(18) NULL,
+	tipo_documento       CHAR(18) NULL,
+	fecha                CHAR(18) NULL
+);
+
+
+
+CREATE TABLE modelo
+(
+	id                   CHAR(18) NOT NULL,
+	descripcion          CHAR(18) NULL,
+	vigencia             CHAR(18) NULL,
+	PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE cliente
+(
+	id                   CHAR(18) NOT NULL,
+	nombre               CHAR(18) NULL,
+	apellido_paterno     CHAR(18) NULL,
+	apellido_materno     CHAR(18) NULL,
+	sexo                 CHAR(18) NULL,
+	DNI                  CHAR(18) NULL,
+	direccion            CHAR(18) NULL,
+	telefono             CHAR(18) NULL,
+	PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE venta_moto
+(
+	precio               CHAR(18) NULL,
+	cantidad             CHAR(18) NULL,
+	numero_serie         CHAR(18) NULL,
+	estado               CHAR(18) NULL,
+	fecha                CHAR(18) NULL
+);
+
+
+
+CREATE TABLE cotizacion_moto
+(
+	precio               CHAR(18) NULL,
+	estado               CHAR(18) NULL
+);
+
+
+
+CREATE TABLE moto
+(
+	id                   CHAR(18) NOT NULL,
+	descripcion          CHAR(18) NULL,
+	stok                 CHAR(18) NULL,
+	año                  CHAR(18) NULL,
+	precio               CHAR(18) NULL,
+	motor                CHAR(18) NULL,
+	PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE oferta
+(
+	id                   CHAR(18) NOT NULL,
+	estado               CHAR(18) NULL,
+	descripcion          CHAR(18) NULL,
+	fecha_inicio         CHAR(18) NULL,
+	fecha_final          CHAR(18) NULL,
+	PRIMARY KEY (id)
+);
+
+
