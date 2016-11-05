@@ -911,3 +911,526 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "
 [2016-11-04 17:35:32] DEBUG [django.db.backends:90] (0.002) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'RrMojC65HkN23Qrh5MeSgykSkfX9CH'; args=('RrMojC65HkN23Qrh5MeSgykSkfX9CH',)
 [2016-11-04 17:35:32] DEBUG [django.db.backends:90] (0.000) SELECT COUNT(*) AS "__count" FROM "catalogo_autor"; args=()
 [2016-11-04 17:35:32] INFO [django.server:131] "GET /api/catalogo/autors/ HTTP/1.1" 200 124
+[2016-11-04 18:03:59] DEBUG [django.db.backends:90] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-04 18:03:59] DEBUG [django.db.backends:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-04 18:08:54] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-11-04 18:08:54] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'E:\\\\LP2-PROYECT\\\\vemo\\\\ve_vemo\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-11-04 18:08:54] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'E:\\\\LP2-PROYECT\\\\vemo\\\\ve_vemo\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-11-04 18:08:54] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'E:\\\\LP2-PROYECT\\\\vemo\\\\ve_vemo\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-11-04 18:08:54] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'E:\\\\LP2-PROYECT\\\\vemo\\\\vemo_service\\\\vemo_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-11-04 18:08:54] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'E:\\LP2-PROYECT\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'E:\\LP2-PROYECT\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'E:\\\\LP2-PROYECT\\\\vemo\\\\vemo_service\\\\vemo_service_apps\\\\catalogo_api\\\\urls.py'> (None:None) ^api/catalogo/>"
+[2016-11-04 18:08:54] WARNING [django.request:152] Not Found: /
+[2016-11-04 18:08:54] WARNING [django.server:131] "GET / HTTP/1.1" 404 2455
+[2016-11-04 18:09:00] DEBUG [django.db.backends:90] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'hgbtqjzp5ywrw0ujznp8lb9m3n1h9yvn' AND "django_session"."expire_date" > '2016-11-05 00:09:00.525521'); args=('hgbtqjzp5ywrw0ujznp8lb9m3n1h9yvn', '2016-11-05 00:09:00.525521')
+[2016-11-04 18:09:00] INFO [django.server:131] "GET /admin/auths/menu/add/ HTTP/1.1" 302 0
+[2016-11-04 18:09:00] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'None': None, 'False': False, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x043744F0>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x043746B0>>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'INFO': 20, 'ERROR': 40, 'SUCCESS': 25, 'DEBUG': 10}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00A3B2B0>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04364978>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/auths/menu/add/'>}, {}, {'username': '', 'has_permission': False, 'site': <django.contrib.sites.requests.RequestSite object at 0x007FA1F0>, 'site_name': '127.0.0.1:9000', 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0367D9B0>, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0367DA10>, 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'app_path': '/admin/login/?next=/admin/auths/menu/add/', 'LANGUAGE_CODE': 'en-us', 'title': 'Log in', 'next': '/admin/auths/menu/add/', 'site_url': '/', 'LANGUAGE_BIDI': False, 'available_apps': []}]"
+[2016-11-04 18:09:00] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'None': None, 'False': False, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x043744F0>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x043746B0>>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'INFO': 20, 'ERROR': 40, 'SUCCESS': 25, 'DEBUG': 10}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00A3B2B0>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04364978>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/auths/menu/add/'>}, {}, {'username': '', 'has_permission': False, 'site': <django.contrib.sites.requests.RequestSite object at 0x007FA1F0>, 'site_name': '127.0.0.1:9000', 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0367D9B0>, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0367DA10>, 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'app_path': '/admin/login/?next=/admin/auths/menu/add/', 'LANGUAGE_CODE': 'en-us', 'title': 'Log in', 'next': '/admin/auths/menu/add/', 'site_url': '/', 'LANGUAGE_BIDI': False, 'available_apps': []}]"
+[2016-11-04 18:09:00] INFO [django.server:131] "GET /admin/login/?next=/admin/auths/menu/add/ HTTP/1.1" 200 1688
+[2016-11-04 18:09:00] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 200 15937
+[2016-11-04 18:09:00] INFO [django.server:131] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[2016-11-04 18:09:00] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[2016-11-04 18:09:00] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[2016-11-04 18:09:00] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."username" = 'admin'; args=('admin',)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'zn5wqqgsq3bogfdledos6ub7gz2x1m55' LIMIT 1; args=('zn5wqqgsq3bogfdledos6ub7gz2x1m55',)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.034) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'zn5wqqgsq3bogfdledos6ub7gz2x1m55', 'NWY5ZmU0MmU5OWVmZTEzNGMwN2ZjZGIwNmE4ODhjMjg1MWIyMjU3ODp7fQ==', '2016-11-19 00:09:09.183558'; args=('zn5wqqgsq3bogfdledos6ub7gz2x1m55', 'NWY5ZmU0MmU5OWVmZTEzNGMwN2ZjZGIwNmE4ODhjMjg1MWIyMjU3ODp7fQ==', '2016-11-19 00:09:09.183558')
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) UPDATE "auths_user" SET "last_login" = '2016-11-05 00:09:09.371016' WHERE "auths_user"."id" = '3651942c1384420da02bbf9e5eca3faa'; args=('2016-11-05 00:09:09.371016', '3651942c1384420da02bbf9e5eca3faa')
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) UPDATE "django_session" SET "session_data" = 'ZDk0OWEyMDJlODgxN2M1MjllZjk0NGM0YjUyODYxYTQwY2E0NzBiMzp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkY2E2MTI4YzllYWM4MWVjZTNkNmU3ZjE0NjNhMjA4Yzk4ZWQ5OGMiLCJfYXV0aF91c2VyX2lkIjoiMzY1MTk0MmMtMTM4NC00MjBkLWEwMmItYmY5ZTVlY2EzZmFhIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQifQ==', "expire_date" = '2016-11-19 00:09:09.448040' WHERE "django_session"."session_key" = 'zn5wqqgsq3bogfdledos6ub7gz2x1m55'; args=('ZDk0OWEyMDJlODgxN2M1MjllZjk0NGM0YjUyODYxYTQwY2E0NzBiMzp7Il9hdXRoX3VzZXJfaGFzaCI6ImZkY2E2MTI4YzllYWM4MWVjZTNkNmU3ZjE0NjNhMjA4Yzk4ZWQ5OGMiLCJfYXV0aF91c2VyX2lkIjoiMzY1MTk0MmMtMTM4NC00MjBkLWEwMmItYmY5ZTVlY2EzZmFhIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQifQ==', '2016-11-19 00:09:09.448040', 'zn5wqqgsq3bogfdledos6ub7gz2x1m55')
+[2016-11-04 18:09:09] INFO [django.server:131] "POST /admin/login/?next=/admin/auths/menu/add/ HTTP/1.1" 302 0
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zn5wqqgsq3bogfdledos6ub7gz2x1m55' AND "django_session"."expire_date" > '2016-11-05 00:09:09.542442'); args=('zn5wqqgsq3bogfdledos6ub7gz2x1m55', '2016-11-05 00:09:09.542442')
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = '3651942c1384420da02bbf9e5eca3faa'; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'menu' AND "django_content_type"."app_label" = 'auths'); args=('menu', 'auths')
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=()
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 1; args=(1,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 1; args=(1,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 1; args=(1,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 3; args=(3,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 3; args=(3,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 3; args=(3,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 2; args=(2,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 2; args=(2,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 2; args=(2,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 12; args=(12,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 12; args=(12,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 12; args=(12,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 12; args=(12,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 12; args=(12,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 14; args=(14,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 14; args=(14,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 14; args=(14,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 14; args=(14,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 14; args=(14,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 17; args=(17,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 17; args=(17,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 17; args=(17,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 17; args=(17,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 17; args=(17,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 16; args=(16,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 16; args=(16,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 16; args=(16,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 15; args=(15,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 15; args=(15,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 15; args=(15,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 15; args=(15,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 15; args=(15,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 13; args=(13,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 13; args=(13,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 13; args=(13,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 11; args=(11,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 11; args=(11,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 11; args=(11,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 20; args=(20,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 20; args=(20,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 20; args=(20,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 20; args=(20,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 20; args=(20,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 18; args=(18,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 18; args=(18,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 18; args=(18,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 18; args=(18,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 18; args=(18,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 19; args=(19,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 19; args=(19,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 19; args=(19,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 19; args=(19,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 19; args=(19,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 21; args=(21,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 21; args=(21,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 21; args=(21,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 21; args=(21,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 21; args=(21,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 4; args=(4,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 4; args=(4,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 4; args=(4,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 6; args=(6,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 6; args=(6,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 6; args=(6,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 7; args=(7,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 7; args=(7,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 7; args=(7,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 10; args=(10,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 10; args=(10,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 10; args=(10,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 8; args=(8,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 8; args=(8,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 8; args=(8,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 9; args=(9,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 9; args=(9,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 9; args=(9,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 5; args=(5,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 5; args=(5,)
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."id" = 5; args=(5,)
+[2016-11-04 18:09:09] DEBUG [django.template:929] Exception while resolving variable 'can_delete_related' in template 'admin/related_widget_wrapper.html'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'can_delete_related'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'can_delete_related'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'can_delete_related'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [can_delete_related] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'can_add_related\': True, \'can_change_related\': True, \'change_related_template_url\': \'/admin/auth/permission/__fk__/change/\', \'name\': \'permission\', \'model\': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03B2BB50>, \'widget\': \'<select id="id_permission" name="permission">\\n<option value="" selected="selected">---------</option>\\n<option value="1">admin | log entry | Can add log entry</option>\\n<option value="2">admin | log entry | Can change log entry</option>\\n<option value="3">admin | log entry | Can delete log entry</option>\\n<option value="7">auth | group | Can add group</option>\\n<option value="8">auth | group | Can change group</option>\\n<option value="9">auth | group | Can delete group</option>\\n<option value="4">auth | permission | Can add permission</option>\\n<option value="5">auth | permission | Can change permission</option>\\n<option value="6">auth | permission | Can delete permission</option>\\n<option value="34">auths | hierarchy | Can add hierarchy</option>\\n<option value="35">auths | hierarchy | Can change hierarchy</option>\\n<option value="36">auths | hierarchy | Can delete hierarchy</option>\\n<option value="38">auths | hierarchy | Can get hierarchy</option>\\n<option value="37">auths | hierarchy | Can list hierarchy</option>\\n<option value="42">auths | hierarchy type | Can add hierarchy type</option>\\n<option value="43">auths | hierarchy type | Can change hierarchy type</option>\\n<option value="44">auths | hierarchy type | Can delete hierarchy type</option>\\n<option value="46">auths | hierarchy type | Can get hierarchytype</option>\\n<option value="45">auths | hierarchy type | Can list hierarchytype</option>\\n<option value="55">auths | menu | Can add menu</option>\\n<option value="56">auths | menu | Can change menu</option>\\n<option value="57">auths | menu | Can delete menu</option>\\n<option value="59">auths | menu | Can get menu</option>\\n<option value="58">auths | menu | Can list menu</option>\\n<option value="52">auths | Person | Can add Person</option>\\n<option value="53">auths | Person | Can change Person</option>\\n<option value="54">auths | Person | Can delete Person</option>\\n<option value="47">auths | User | Can add User</option>\\n<option value="48">auths | User | Can change User</option>\\n<option value="49">auths | User | Can delete User</option>\\n<option value="51">auths | User | Can get user</option>\\n<option value="50">auths | User | Can list user</option>\\n<option value="39">auths | user hierarchy group | Can add user hierarchy group</option>\\n<option value="40">auths | user hierarchy group | Can change user hierarchy group</option>\\n<option value="41">auths | user hierarchy group | Can delete user hierarchy group</option>\\n<option value="31">auths | user hierarchy permission | Can add user hierarchy permission</option>\\n<option value="32">auths | user hierarchy permission | Can change user hierarchy permission</option>\\n<option value="33">auths | user hierarchy permission | Can delete user hierarchy permission</option>\\n<option value="70">catalogo | Autor | Can add Autor</option>\\n<option value="71">catalogo | Autor | Can change Autor</option>\\n<option value="72">catalogo | Autor | Can delete Autor</option>\\n<option value="74">catalogo | Autor | Can get autor</option>\\n<option value="73">catalogo | Autor | Can list autor</option>\\n<option value="60">catalogo | Categoria | Can add Categoria</option>\\n<option value="61">catalogo | Categoria | Can change Categoria</option>\\n<option value="62">catalogo | Categoria | Can delete Categoria</option>\\n<option value="64">catalogo | Categoria | Can get categoria</option>\\n<option value="63">catalogo | Categoria | Can list categoria</option>\\n<option value="65">catalogo | Ejemplar | Can add Ejemplar</option>\\n<option value="66">catalogo | Ejemplar | Can change Ejemplar</option>\\n<option value="67">catalogo | Ejemplar | Can delete Ejemplar</option>\\n<option value="69">catalogo | Ejemplar | Can get ejemplar</option>\\n<option value="68">catalogo | Ejemplar | Can list ejemplar</option>\\n<option value="75">catalogo | Libro | Can add Libro</option>\\n<option value="76">catalogo | Libro | Can change Libro</option>\\n<option value="77">catalogo | Libro | Can delete Libro</option>\\n<option value="79">catalogo | Libro | Can get libro</option>\\n<option value="78">catalogo | Libro | Can list libro</option>\\n<option value="10">contenttypes | content type | Can add content type</option>\\n<option value="11">contenttypes | content type | Can change content type</option>\\n<option value="12">contenttypes | content type | Can delete content type</option>\\n<option value="16">corsheaders | cors model | Can add cors model</option>\\n<option value="17">corsheaders | cors model | Can change cors model</option>\\n<option value="18">corsheaders | cors model | Can delete cors model</option>\\n<option value="19">oauth2_provider | access token | Can add access token</option>\\n<option value="20">oauth2_provider | access token | Can change access token</option>\\n<option value="21">oauth2_provider | access token | Can delete access token</option>\\n<option value="28">oauth2_provider | application | Can add application</option>\\n<option value="29">oauth2_provider | application | Can change application</option>\\n<option value="30">oauth2_provider | application | Can delete application</option>\\n<option value="22">oauth2_provider | grant | Can add grant</option>\\n<option value="23">oauth2_provider | grant | Can change grant</option>\\n<option value="24">oauth2_provider | grant | Can delete grant</option>\\n<option value="25">oauth2_provider | refresh token | Can add refresh token</option>\\n<option value="26">oauth2_provider | refresh token | Can change refresh token</option>\\n<option value="27">oauth2_provider | refresh token | Can delete refresh token</option>\\n<option value="13">sessions | session | Can add session</option>\\n<option value="14">sessions | session | Can change session</option>\\n<option value="15">sessions | session | Can delete session</option>\\n</select>\', \'url_params\': \'_to_field=id&_popup=1\', \'add_related_url\': \'/admin/auth/permission/add/\'}, {\'block\': <Block Node: links. Contents: [<TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n    \'>]>}]'
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.000) SELECT "auths_menu"."id", "auths_menu"."module", "auths_menu"."state", "auths_menu"."title", "auths_menu"."url", "auths_menu"."template_url", "auths_menu"."pos", "auths_menu"."icon", "auths_menu"."is_active", "auths_menu"."is_abstract", "auths_menu"."description", "auths_menu"."router_json", "auths_menu"."permission_id", "auths_menu"."parent_id", "auths_menu"."created_at", "auths_menu"."updated_at", "auths_menu"."registered_by" FROM "auths_menu"; args=()
+[2016-11-04 18:09:09] DEBUG [django.template:929] Exception while resolving variable 'can_delete_related' in template 'admin/related_widget_wrapper.html'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'can_delete_related'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'Context' has no attribute 'can_delete_related'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'can_delete_related'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [can_delete_related] in '[{\'None\': None, \'False\': False, \'True\': True}, {\'can_add_related\': True, \'can_change_related\': True, \'change_related_template_url\': \'/admin/auths/menu/__fk__/change/\', \'name\': \'parent\', \'model\': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03B84750>, \'widget\': \'<select id="id_parent" name="parent">\\n<option value="" selected="selected">---------</option>\\n</select>\', \'url_params\': \'_to_field=id&_popup=1\', \'add_related_url\': \'/admin/auths/menu/add/\'}, {\'block\': <Block Node: links. Contents: [<TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n        \'>, <IfNode>, <TextNode: \'\\n    \'>]>}]'
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /admin/auths/menu/add/ HTTP/1.1" 200 17421
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zn5wqqgsq3bogfdledos6ub7gz2x1m55' AND "django_session"."expire_date" > '2016-11-05 00:09:09.687543'); args=('zn5wqqgsq3bogfdledos6ub7gz2x1m55', '2016-11-05 00:09:09.687543')
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/js/core.js HTTP/1.1" 200 7976
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/css/forms.css HTTP/1.1" 200 7750
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6577
+[2016-11-04 18:09:09] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = '3651942c1384420da02bbf9e5eca3faa'; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/js/actions.js HTTP/1.1" 200 6501
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8186
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/js/change_form.js HTTP/1.1" 200 698
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2016-11-04 18:09:09] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[2016-11-04 18:09:14] DEBUG [django.db.backends:90] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'zn5wqqgsq3bogfdledos6ub7gz2x1m55' AND "django_session"."expire_date" > '2016-11-05 00:09:14.803909'); args=('zn5wqqgsq3bogfdledos6ub7gz2x1m55', '2016-11-05 00:09:14.803909')
+[2016-11-04 18:09:14] DEBUG [django.db.backends:90] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = '3651942c1384420da02bbf9e5eca3faa'; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-04 18:09:14] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'None': None, 'False': False, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x008808B0>, 'user': <SimpleLazyObject: <User: admin>>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'INFO': 20, 'ERROR': 40, 'SUCCESS': 25, 'DEBUG': 10}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00866A10>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00834858>>, 'request': <WSGIRequest: GET '/admin/'>}, {}, {'app_list': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x036975F0>, 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880B70>, 'add_url': '/admin/auth/group/add/', 'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00A44F50>, 'add_url': '/admin/auth/permission/add/', 'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auth', 'has_module_perms': True, 'app_url': '/admin/auth/'}, {'name': 'Auths', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x008802B0>, 'add_url': '/admin/auths/hierarchytype/add/', 'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880270>, 'add_url': '/admin/auths/hierarchy/add/', 'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880070>, 'add_url': '/admin/auths/menu/add/', 'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880510>, 'add_url': '/admin/auths/person/add/', 'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880230>, 'add_url': '/admin/auths/userhierarchygroup/add/', 'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880290>, 'add_url': '/admin/auths/userhierarchypermission/add/', 'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880050>, 'add_url': '/admin/auths/user/add/', 'object_name': 'User', 'admin_url': '/admin/auths/user/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auths', 'has_module_perms': True, 'app_url': '/admin/auths/'}, {'name': 'Catalogo', 'models': [{'name': 'Autores', 'add_url': '/admin/catalogo/autor/add/', 'object_name': 'Autor', 'admin_url': '/admin/catalogo/autor/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': 'Categorias', 'add_url': '/admin/catalogo/categoria/add/', 'object_name': 'Categoria', 'admin_url': '/admin/catalogo/categoria/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': 'Libros', 'add_url': '/admin/catalogo/libro/add/', 'object_name': 'Libro', 'admin_url': '/admin/catalogo/libro/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'catalogo', 'has_module_perms': True, 'app_url': '/admin/catalogo/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x036973D0>, 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x008800D0>, 'add_url': '/admin/contenttypes/contenttype/add/', 'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'contenttypes', 'has_module_perms': True, 'app_url': '/admin/contenttypes/'}, {'name': 'Django OAuth Toolkit', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x008801F0>, 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x008801B0>, 'add_url': '/admin/oauth2_provider/application/add/', 'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880090>, 'add_url': '/admin/oauth2_provider/grant/add/', 'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x008800B0>, 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'oauth2_provider', 'has_module_perms': True, 'app_url': '/admin/oauth2_provider/'}], 'has_permission': True, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0367D9B0>, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0367DA10>, 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0367DA70>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/', 'LANGUAGE_BIDI': False, 'available_apps': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x036975F0>, 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BD10>, 'add_url': '/admin/auth/group/add/', 'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BE90>, 'add_url': '/admin/auth/permission/add/', 'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auth', 'has_module_perms': True, 'app_url': '/admin/auth/'}, {'name': 'Auths', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BCF0>, 'add_url': '/admin/auths/hierarchytype/add/', 'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BAF0>, 'add_url': '/admin/auths/hierarchy/add/', 'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BDF0>, 'add_url': '/admin/auths/menu/add/', 'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BD90>, 'add_url': '/admin/auths/person/add/', 'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BC50>, 'add_url': '/admin/auths/userhierarchygroup/add/', 'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BDD0>, 'add_url': '/admin/auths/userhierarchypermission/add/', 'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BEF0>, 'add_url': '/admin/auths/user/add/', 'object_name': 'User', 'admin_url': '/admin/auths/user/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auths', 'has_module_perms': True, 'app_url': '/admin/auths/'}, {'name': 'Catalogo', 'models': [{'name': 'Autores', 'add_url': '/admin/catalogo/autor/add/', 'object_name': 'Autor', 'admin_url': '/admin/catalogo/autor/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': 'Categorias', 'add_url': '/admin/catalogo/categoria/add/', 'object_name': 'Categoria', 'admin_url': '/admin/catalogo/categoria/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': 'Libros', 'add_url': '/admin/catalogo/libro/add/', 'object_name': 'Libro', 'admin_url': '/admin/catalogo/libro/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'catalogo', 'has_module_perms': True, 'app_url': '/admin/catalogo/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x036973D0>, 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BFF0>, 'add_url': '/admin/contenttypes/contenttype/add/', 'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'contenttypes', 'has_module_perms': True, 'app_url': '/admin/contenttypes/'}, {'name': 'Django OAuth Toolkit', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BF90>, 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BED0>, 'add_url': '/admin/oauth2_provider/application/add/', 'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BA90>, 'add_url': '/admin/oauth2_provider/grant/add/', 'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BF30>, 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'oauth2_provider', 'has_module_perms': True, 'app_url': '/admin/oauth2_provider/'}]}]"
+[2016-11-04 18:09:14] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LP2-PROYECT\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'None': None, 'False': False, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x008808B0>, 'user': <SimpleLazyObject: <User: admin>>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'INFO': 20, 'ERROR': 40, 'SUCCESS': 25, 'DEBUG': 10}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x00866A10>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x00834858>>, 'request': <WSGIRequest: GET '/admin/'>}, {}, {'app_list': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x036975F0>, 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880B70>, 'add_url': '/admin/auth/group/add/', 'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00A44F50>, 'add_url': '/admin/auth/permission/add/', 'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auth', 'has_module_perms': True, 'app_url': '/admin/auth/'}, {'name': 'Auths', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x008802B0>, 'add_url': '/admin/auths/hierarchytype/add/', 'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880270>, 'add_url': '/admin/auths/hierarchy/add/', 'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880070>, 'add_url': '/admin/auths/menu/add/', 'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880510>, 'add_url': '/admin/auths/person/add/', 'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880230>, 'add_url': '/admin/auths/userhierarchygroup/add/', 'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880290>, 'add_url': '/admin/auths/userhierarchypermission/add/', 'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880050>, 'add_url': '/admin/auths/user/add/', 'object_name': 'User', 'admin_url': '/admin/auths/user/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auths', 'has_module_perms': True, 'app_url': '/admin/auths/'}, {'name': 'Catalogo', 'models': [{'name': 'Autores', 'add_url': '/admin/catalogo/autor/add/', 'object_name': 'Autor', 'admin_url': '/admin/catalogo/autor/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': 'Categorias', 'add_url': '/admin/catalogo/categoria/add/', 'object_name': 'Categoria', 'admin_url': '/admin/catalogo/categoria/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': 'Libros', 'add_url': '/admin/catalogo/libro/add/', 'object_name': 'Libro', 'admin_url': '/admin/catalogo/libro/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'catalogo', 'has_module_perms': True, 'app_url': '/admin/catalogo/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x036973D0>, 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x008800D0>, 'add_url': '/admin/contenttypes/contenttype/add/', 'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'contenttypes', 'has_module_perms': True, 'app_url': '/admin/contenttypes/'}, {'name': 'Django OAuth Toolkit', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x008801F0>, 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x008801B0>, 'add_url': '/admin/oauth2_provider/application/add/', 'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x00880090>, 'add_url': '/admin/oauth2_provider/grant/add/', 'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x008800B0>, 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'oauth2_provider', 'has_module_perms': True, 'app_url': '/admin/oauth2_provider/'}], 'has_permission': True, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0367D9B0>, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0367DA10>, 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0367DA70>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/', 'LANGUAGE_BIDI': False, 'available_apps': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x036975F0>, 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BD10>, 'add_url': '/admin/auth/group/add/', 'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BE90>, 'add_url': '/admin/auth/permission/add/', 'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auth', 'has_module_perms': True, 'app_url': '/admin/auth/'}, {'name': 'Auths', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BCF0>, 'add_url': '/admin/auths/hierarchytype/add/', 'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BAF0>, 'add_url': '/admin/auths/hierarchy/add/', 'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BDF0>, 'add_url': '/admin/auths/menu/add/', 'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BD90>, 'add_url': '/admin/auths/person/add/', 'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BC50>, 'add_url': '/admin/auths/userhierarchygroup/add/', 'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BDD0>, 'add_url': '/admin/auths/userhierarchypermission/add/', 'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BEF0>, 'add_url': '/admin/auths/user/add/', 'object_name': 'User', 'admin_url': '/admin/auths/user/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'auths', 'has_module_perms': True, 'app_url': '/admin/auths/'}, {'name': 'Catalogo', 'models': [{'name': 'Autores', 'add_url': '/admin/catalogo/autor/add/', 'object_name': 'Autor', 'admin_url': '/admin/catalogo/autor/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': 'Categorias', 'add_url': '/admin/catalogo/categoria/add/', 'object_name': 'Categoria', 'admin_url': '/admin/catalogo/categoria/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': 'Libros', 'add_url': '/admin/catalogo/libro/add/', 'object_name': 'Libro', 'admin_url': '/admin/catalogo/libro/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'catalogo', 'has_module_perms': True, 'app_url': '/admin/catalogo/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x036973D0>, 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BFF0>, 'add_url': '/admin/contenttypes/contenttype/add/', 'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'contenttypes', 'has_module_perms': True, 'app_url': '/admin/contenttypes/'}, {'name': 'Django OAuth Toolkit', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BF90>, 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BED0>, 'add_url': '/admin/oauth2_provider/application/add/', 'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BA90>, 'add_url': '/admin/oauth2_provider/grant/add/', 'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'perms': {'add': True, 'change': True, 'delete': True}}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0089BF30>, 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'perms': {'add': True, 'change': True, 'delete': True}}], 'app_label': 'oauth2_provider', 'has_module_perms': True, 'app_url': '/admin/oauth2_provider/'}]}]"
+[2016-11-04 18:09:14] DEBUG [django.db.backends:90] (0.001) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auths_user" ON ("django_admin_log"."user_id" = "auths_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = '3651942c1384420da02bbf9e5eca3faa' ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-04 18:09:14] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 10333
+[2016-11-04 18:09:14] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 434
