@@ -191,7 +191,7 @@ app.constant('ROUTERS', [{
                 "templateUrl": "app/views/content.html"
             }
         }
-    /*},
+    },
     "modelo.modelo": {
         "url": "/modelo",
         "template": "<div ui-view ></div>"
@@ -200,56 +200,31 @@ app.constant('ROUTERS', [{
     "modelo.modelo.marca": {
         "url": "/marca",
         "data": {
-            "section": "Modelo",
-            "page": "marca"
-        },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/index.html"
-    },
-    "modelo.modelo.marcaNew": {
-        "url": "/marca/new",
-        "data": {
-            "section": "Modelo",
-            "page": "marca"
-        },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
-    },
-    "modelo.modelo.marcaEdit": {
-        "url": "/marca/:id/edit",
-        "data": {
-            "section": "Modelo",
-            "page": "marca"
-        },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
-    }*/
 
-    },
-    "Moto.moto": {
-        "url": "/moto",
-        "template": "<div ui-view ></div>"
-    }
-}, {
-    "moto.moto.modelo": {
-        "url": "/modelo",
-        "data": {
-            "section": "Moto",
-            "page": "modelo"
+            "section": "Modelo",
+            "page": "marca"
         },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/index.html"
+         "templateUrl": "vemo_web_apps/catalogo_web/views/marca/index.html"
     },
-    "moto.moto.marcaNew": {
-        "url": "/moto/motonew",
-        "data": {
-            "section": "moto",
-            "page": "marcaNew"
+     "modelo.modelo.marcaNew": {
+        "url": "/marca/new",
+        "data":
+         {
+            "section": "Modelo",
+            "page": "marca"
         },
-        "templateUrl": "vemo_web_apps/moto_web/views/marca/form.html"
-    },
-    "moto.moto.modeloEdit": {
-        "url": "/moto/:id/edit",
-        "data": {
-            "section": "moto",
-            "page": "moto"
+           "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
+    },      
+    "modelo.modelo.marcaEdit": {
+
+        "url": "/marca/:id/edit",
+        "data": 
+        {
+            "section": "Modelo",
+            "page": "marca"
         },
         "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
     }
+
+          
 }]);
