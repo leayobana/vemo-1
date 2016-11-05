@@ -191,7 +191,7 @@ app.constant('ROUTERS', [{
                 "templateUrl": "app/views/content.html"
             }
         }
-    },
+    /*},
     "modelo.modelo": {
         "url": "/modelo",
         "template": "<div ui-view ></div>"
@@ -218,6 +218,37 @@ app.constant('ROUTERS', [{
         "data": {
             "section": "Modelo",
             "page": "marca"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
+    }*/
+
+    },
+    "Moto.moto": {
+        "url": "/moto",
+        "template": "<div ui-view ></div>"
+    }
+}, {
+    "moto.moto.modelo": {
+        "url": "/modelo",
+        "data": {
+            "section": "Moto",
+            "page": "modelo"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/index.html"
+    },
+    "moto.moto.marcaNew": {
+        "url": "/moto/motonew",
+        "data": {
+            "section": "moto",
+            "page": "marcaNew"
+        },
+        "templateUrl": "vemo_web_apps/moto_web/views/marca/form.html"
+    },
+    "moto.moto.modeloEdit": {
+        "url": "/moto/:id/edit",
+        "data": {
+            "section": "moto",
+            "page": "moto"
         },
         "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
     }
