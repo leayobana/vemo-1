@@ -93,7 +93,7 @@ app
     sections.push({
 
         menu: [{
-            title: 'Catálogo',
+            title: 'Cliente',
             type: 'toggle',
             state: 'catalogo.catalogo',
             menu_items: [{
@@ -164,6 +164,29 @@ app
         }]
     });
 
+
+    sections.push({
+
+        menu: [{
+            title: 'REPUESTO',
+            type: 'toggle',
+            state: 'marcas.vemo',
+            menu_items: [{
+                title: 'REPUESTOS DE MOTOR',
+                state: 'catalogo.vemo.catalogacion',
+                type: 'link'
+            }, {
+                title: 'REPUESTOS DE MASCARA',
+                state: 'catalogo.vemo.catalogacion',
+                type: 'link'
+
+            } {
+                title: 'CAJA DE HERRAMIENTAS',
+                state: 'catalogo.vemo.catalogacion',
+                type: 'link'
+            }]
+        }]
+    });
 
 
     authService.getMenu().then(function(r) {
