@@ -177,7 +177,9 @@ app.constant('ROUTERS', [{
         "templateUrl": "vemo_web_apps/catalogo_web/views/autores/form.html"
     }
 
-}, /*{
+}, 
+
+/*{
     "modelo": {
         "url": "/modelo",
         "views": {
