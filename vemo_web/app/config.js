@@ -250,7 +250,9 @@ app.constant('ROUTERS', [{
             "page": "marca"
         },
         "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
-    }{
+    }
+    /*PROBLEMAS AL COMPILAR*/
+    /*{
     "catalogo.vemo": {
         "url": "/vemo",
         "template": "<div ui-view ></div>"
@@ -279,6 +281,6 @@ app.constant('ROUTERS', [{
             "page": "Autores"
         },
         "templateUrl": "vemo_web_apps/catalogo_web/views/catalogacion/form.html"
-    }
+    }*/
 
 }]);
