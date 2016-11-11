@@ -149,6 +149,21 @@ app
         }]
     });
 
+    sections.push({
+
+        menu: [{
+            title: 'MARCAS',
+            type: 'toggle',
+            state: 'marcas.vemo',
+            menu_items: [{
+                title: 'SUSUKI',
+                state: 'catalogo.vemo.catalogacion',
+                type: 'link'
+            },  ]
+        }]
+    });
+
+
 
     authService.getMenu().then(function(r) {
         menu = r.data;

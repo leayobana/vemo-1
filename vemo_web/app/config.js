@@ -250,7 +250,35 @@ app.constant('ROUTERS', [{
             "page": "marca"
         },
         "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
+    }{
+    "catalogo.vemo": {
+        "url": "/vemo",
+        "template": "<div ui-view ></div>"
     }
 
-          
+    "catalogo.vemo.catalogacion": {
+        "url": "/catalogacion",
+        "data": {
+            "section": "Catálogo",
+            "page": "Autores"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/catalogacion/index.html"
+    },
+    "catalogo.vemo.catalogacionNew": {
+        "url": "/catalogacion/new",
+        "data": {
+            "section": "Catálogo",
+            "page": "Autores"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/catalogacion/form.html"
+    },
+    "catalogo.vemo.catalogacionEdit": {
+        "url": "/catalogacion/:id/edit",
+        "data": {
+            "section": "Catálogo",
+            "page": "Autores"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/catalogacion/form.html"
+    }
+
 }]);
