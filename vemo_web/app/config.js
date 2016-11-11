@@ -178,7 +178,7 @@ app.constant('ROUTERS', [{
     }
 
 }, 
-
+/*ERROR DE COMPILACION SR. HENRRI REPARAR EL PROYECTO URGENTE SI NO FUENTES */
 /*{
     "modelo": {
         "url": "/modelo",
