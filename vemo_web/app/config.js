@@ -1,4 +1,4 @@
-﻿var baseUrl = 'http://localhost:9000/';
+var baseUrl = 'http://localhost:9000/';
 var loginUrl = 'http://localhost:9001/auth_web/';
 
 var config = {
@@ -177,7 +177,7 @@ app.constant('ROUTERS', [{
         "templateUrl": "vemo_web_apps/catalogo_web/views/autores/form.html"
     }
 
-}, {
+}, /*{
     "modelo": {
         "url": "/modelo",
         "views": {
@@ -196,33 +196,7 @@ app.constant('ROUTERS', [{
         "url": "/modelo",
         "template": "<div ui-view ></div>"
     }
-}, {
-    "modelo.modelo.cliente": {
-        "url": "/cliente",
-        "data": {
-            "section": "Modelo",
-            "page": "cliente"
-        },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/cliente/index.html"
-    },
-    "modelo.modelo.clienteNew": {
-        "url": "/cliente/new",
-        "data": {
-            "section": "Modelo",
-            "page": "cliente"
-        },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/cliente/form.html"
-    },
-    "modelo.modelo.clienteEdit": {
-        "url": "/cliente/:id/edit",
-        "data": {
-            "section": "Modelo",
-            "page": "cliente"
-        },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/cliente/form.html"
-    } , 
-
-    {
+}, {    
     "modelo.modelo.marca": {
         "url": "/marca",
         "data": {
@@ -251,36 +225,6 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
     }
-    /*PROBLEMAS AL COMPILAR*/
-    /*{
-    "catalogo.vemo": {
-        "url": "/vemo",
-        "template": "<div ui-view ></div>"
-    }
-
-    "catalogo.vemo.catalogacion": {
-        "url": "/catalogacion",
-        "data": {
-            "section": "Catálogo",
-            "page": "Autores"
-        },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/catalogacion/index.html"
-    },
-    "catalogo.vemo.catalogacionNew": {
-        "url": "/catalogacion/new",
-        "data": {
-            "section": "Catálogo",
-            "page": "Autores"
-        },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/catalogacion/form.html"
-    },
-    "catalogo.vemo.catalogacionEdit": {
-        "url": "/catalogacion/:id/edit",
-        "data": {
-            "section": "Catálogo",
-            "page": "Autores"
-        },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/catalogacion/form.html"
-    }*/
-
+*/
+          
 }]);
