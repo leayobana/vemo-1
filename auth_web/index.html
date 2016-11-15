@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-
+<h1><u>VENTA DE MOTOS</u></h1>
 <head>
     <meta charset="UTF-8">
     <title ng-bind="$state.current.data.section + ($state.current.data.section === Null ? '' : ' > ') +
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    
+
     <div  ui-view ng-controller="MainCtrl"></div>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
@@ -37,5 +37,16 @@
     <script src="auth_web_apps/access_web/services/loginService.js"></script>
     <script src="auth_web_apps/access_web/router.js"></script>
 </body>
-
 </html>
+<style type="text/css">
+    h1{
+        text-align: center;
+        font-family: courier;
+        font-size: 25px;
+        color: #05ff8a;
+    }
+    body{
+        background-color: #098ee8;
+        border: #006063 10px groove;
+    }
+</style>

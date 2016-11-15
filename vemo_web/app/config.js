@@ -226,7 +226,35 @@ app.constant('ROUTERS', [{
             "page": "marca"
         },
         "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
+    },
+*/    "catalogo.catalogo": {
+        "url": "/catalogo",
+        "template": "<div ui-view ></div>"
     }
-*/
-          
+}, {
+    "catalogo.catalogo.clientes": {
+        "url": "/clientes",
+        "data": {
+            "section": "Cliente",
+            "page": "Clientes"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/clientes/index.html"
+    },
+    "catalogo.catalogo.clientesNew": {
+        "url": "/categorias/new",
+        "data": {
+            "section": "Cliente",
+            "page": "Clientes"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/clientes/form.html"
+    },
+    "catalogo.catalogo.clientesEdit": {
+        "url": "/categorias/:id/edit",
+        "data": {
+            "section": "Cliente",
+            "page": "Clientes"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/clientes/form.html"
+    }
+},        
 }]);
