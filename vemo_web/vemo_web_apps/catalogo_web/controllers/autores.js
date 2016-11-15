@@ -16,7 +16,7 @@ app
             $scope.options = r.options;
             $scope.isLoading = false;
         }, function(err) {
-            $log.log("Error in list:" + JSON.stringify(err));
+            $log.log("Error al listar:" + JSON.stringify(err));
             toastr.error(err.data.results.detail, err.status + ' ' + err.statusText);
         });
     };
@@ -40,7 +40,7 @@ app
                 toastr.success('Se eliminó autor ' + d.nombre, 'Autor');
                 $scope.list(params);
             }, function(err) {
-                $log.log("Error in delete:" + JSON.stringify(err));
+                $log.log("Error al borrar intente de nuevo:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         }
