@@ -180,7 +180,7 @@ app
                 state: 'catalogo.vemo.catalogacion',
                 type: 'link'
 
-            } {
+            }, {
                 title: 'CAJA DE HERRAMIENTAS',
                 state: 'catalogo.vemo.catalogacion',
                 type: 'link'

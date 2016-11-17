@@ -56,8 +56,7 @@ app
 // Create and Update clientes
 
 // =========================================================================
-.controller("clientes
-aveCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr) {
+.controller("clientesaveCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
     $scope.clientes = {};
 

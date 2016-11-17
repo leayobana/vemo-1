@@ -178,8 +178,8 @@ app.constant('ROUTERS', [{
     }
 
 }, 
-/*ERROR DE COMPILACION SR. HENRRI REPARAR EL PROYECTO URGENTE SI NO FUENTES */
-/*{
+
+{
     "modelo": {
         "url": "/modelo",
         "views": {
@@ -199,48 +199,48 @@ app.constant('ROUTERS', [{
         "template": "<div ui-view ></div>"
     }
 }, {    
-    "modelo.modelo.marca": {
-        "url": "/marca",
-        "data": {
+    // "modelo.modelo.marca": {
+    //     "url": "/marca",
+    //     "data": {
 
-            "section": "Modelo",
-            "page": "marca"
-        },
-         "templateUrl": "vemo_web_apps/catalogo_web/views/marca/index.html"
-    },
-     "modelo.modelo.marcaNew": {
-        "url": "/marca/new",
-        "data":
-         {
-            "section": "Modelo",
-            "page": "marca"
-        },
-           "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
-    },      
-    "modelo.modelo.marcaEdit": {
+    //         "section": "Modelo",
+    //         "page": "marca"
+    //     },
+    //      "templateUrl": "vemo_web_apps/catalogo_web/views/marca/index.html"
+    // },
+    //  "modelo.modelo.marcaNew": {
+    //     "url": "/marca/new",
+    //     "data":
+    //      {
+    //         "section": "Modelo",
+    //         "page": "marca"
+    //     },
+    //        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
+    // },      
+    // "modelo.modelo.marcaEdit": {
 
-        "url": "/marca/:id/edit",
-        "data": 
-        {
-            "section": "Modelo",
-            "page": "marca"
-        },
-        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
-    },
-*/    "catalogo.catalogo": {
-        "url": "/catalogo",
-        "template": "<div ui-view ></div>"
-    }
-}, {
-    "catalogo.catalogo.clientes": {
-        "url": "/clientes",
+    //     "url": "/marca/:id/edit",
+    //     "data": 
+    //     {
+    //         "section": "Modelo",
+    //         "page": "marca"
+    //     },
+    //     "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
+    // },
+   // { "catalogo.catalogo" 
+   //      : "/catalogo",
+   //      "template": "<div ui-view ></div>"
+   //  }
+
+    "catalogo.cliente": {
+        "url": "/cliente",
         "data": {
             "section": "Cliente",
             "page": "Clientes"
         },
         "templateUrl": "vemo_web_apps/catalogo_web/views/clientes/index.html"
     },
-    "catalogo.catalogo.clientesNew": {
+    "catalogo.catalogo.clienteNew": {
         "url": "/categorias/new",
         "data": {
             "section": "Cliente",
@@ -257,4 +257,4 @@ app.constant('ROUTERS', [{
         "templateUrl": "vemo_web_apps/catalogo_web/views/clientes/form.html"
     }
 },        
-}]);
+]);

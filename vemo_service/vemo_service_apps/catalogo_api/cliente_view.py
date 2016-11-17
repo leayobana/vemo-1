@@ -1,8 +1,8 @@
 from rest_framework import serializers, viewsets
 # from django.db.models import Clientes 
 
-from django.db.models.cliente import cliente
-# from vemo_service_apps.model.model.Cliente import Clientes
+#from django.db.models.cliente import Cliente
+from vemo_service_apps.catalogo.models.cliente import Cliente
 
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
