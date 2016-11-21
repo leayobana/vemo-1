@@ -8,14 +8,6 @@ app
 
 
     var sections = [
-        /*
-        {
-          title: 'Getting Started',
-          state: 'getting-started',
-          url: '/getting-started',
-          type: 'link'
-        }
-        */
     ];
 
     sections.push({
@@ -97,37 +89,13 @@ app
             type: 'toggle',
             state: 'catalogo.catalogo',
             menu_items: [{
-                title: 'Categorías',
-                state: 'catalogo.catalogo.categorias',
-                type: 'link'
-            }, {
-                title: 'Autores',
+                title: 'Comprador',
                 state: 'catalogo.catalogo.autores',
                 type: 'link'
             }, ]
         }]
     });
 
-
-    sections.push({
-
-        menu: [{
-            title: 'Modelo',
-            type: 'toggle',
-            state: 'modelo.modelo',
-            menu_items: [{
-                title: 'Marca',
-                state: 'modelo.modelo.marca',
-                type: 'link'
-            }, {
-                title: 'N.motor',
-                state: 'catalogo.catalogo.autores',
-                type: 'link'
-            }, ]
-        },]
-    });
-
-/*ERROR DE COMPILACION REPARAR */
     sections.push({
 
         menu: [{
@@ -135,59 +103,16 @@ app
             type: 'toggle',
             state: 'catalogo.catalogo',
             menu_items: [{
+                title: 'MOTOR',
+                state: 'catalogo.catalogo.motor',
+                type: 'link'
+            },{
                 title: 'MOTOS',
-                state: 'catalogo.catalogo.categorias',
+                state: 'catalogo.catalogo.moto',
                 type: 'link'
-            }, {
-                title: 'ACCESORIOS',
-                state: 'catalogo.catalogo.autores',
-                type: 'link'
-            }, {
-                title: 'Cliente',
-                state: 'modelo.modelo.cliente',
-                type: 'link'
-            }, ]
+            },]
         }]
     });
-
-    sections.push({
-
-        menu: [{
-            title: 'MARCAS',
-            type: 'toggle',
-            state: 'marcas.vemo',
-            menu_items: [{
-                title: 'SUSUKI',
-                state: 'catalogo.vemo.catalogacion',
-                type: 'link'
-            },  ]
-        }]
-    });
-
-
-    sections.push({
-
-        menu: [{
-            title: 'REPUESTO',
-            type: 'toggle',
-            state: 'marcas.vemo',
-            menu_items: [{
-                title: 'REPUESTOS DE MOTOR',
-                state: 'catalogo.vemo.catalogacion',
-                type: 'link'
-            }, {
-                title: 'REPUESTOS DE MASCARA',
-                state: 'catalogo.vemo.catalogacion',
-                type: 'link'
-
-            }, {
-                title: 'CAJA DE HERRAMIENTAS',
-                state: 'catalogo.vemo.catalogacion',
-                type: 'link'
-            }]
-        }]
-    });
-
 
     authService.getMenu().then(function(r) {
         menu = r.data;

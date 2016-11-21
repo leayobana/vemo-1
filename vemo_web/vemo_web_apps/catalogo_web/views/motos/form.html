@@ -1,0 +1,53 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="MotoSaveCtrl">
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/list/66.jpg" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Moto</span>
+                            <span class="md-subhead">moto</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>nombre</label>
+                                <input name="nombre" ng-model="moto.nombre">
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>tipo</label>
+                                <input name="tipo" ng-model="moto.tipo" required>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>motor</label>
+                                <input name="motor" ng-model="moto.motor" required>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>descripcion</label>
+                                <input name="descripcion" ng-model="moto.descripcion" required>
+                            </md-input-container>
+                        </div>
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancel</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="moto.id == null">Create</span>
+                            <span ng-show="moto.id">Update</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

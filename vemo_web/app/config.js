@@ -179,7 +179,7 @@ app.constant('ROUTERS', [{
 
 }, 
 
-{
+/*{
     "modelo": {
         "url": "/modelo",
         "views": {
@@ -198,40 +198,7 @@ app.constant('ROUTERS', [{
         "url": "/modelo",
         "template": "<div ui-view ></div>"
     }
-}, {    
-    // "modelo.modelo.marca": {
-    //     "url": "/marca",
-    //     "data": {
-
-    //         "section": "Modelo",
-    //         "page": "marca"
-    //     },
-    //      "templateUrl": "vemo_web_apps/catalogo_web/views/marca/index.html"
-    // },
-    //  "modelo.modelo.marcaNew": {
-    //     "url": "/marca/new",
-    //     "data":
-    //      {
-    //         "section": "Modelo",
-    //         "page": "marca"
-    //     },
-    //        "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
-    // },      
-    // "modelo.modelo.marcaEdit": {
-
-    //     "url": "/marca/:id/edit",
-    //     "data": 
-    //     {
-    //         "section": "Modelo",
-    //         "page": "marca"
-    //     },
-    //     "templateUrl": "vemo_web_apps/catalogo_web/views/marca/form.html"
-    // },
-   // { "catalogo.catalogo" 
-   //      : "/catalogo",
-   //      "template": "<div ui-view ></div>"
-   //  }
-
+},*/ {    
     "catalogo.cliente": {
         "url": "/cliente",
         "data": {
@@ -256,5 +223,56 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "vemo_web_apps/catalogo_web/views/clientes/form.html"
     }
-},        
+},{
+    "catalogo.catalogo.motor":  {
+        "url": "/motores",
+        "data": {
+            "section": "Motores",
+            "page": "Motores"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/motores/index.html"
+    },
+    "catalogo.catalogo.motoresNew": {
+        "url": "/motores/new",
+        "data": {
+            "section": "Motores",
+            "page": "Motores"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/motores/form.html"
+    },
+    "catalogo.catalogo.motoresEdit": {
+        "url": "/motores/:id/edit",
+        "data": {
+            "section": "Motores",
+            "page": "Motores"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/motores/form.html"
+    }
+},{
+    "catalogo.catalogo.moto":  {
+        "url": "/motos",
+        "data": {
+            "section": "Motos",
+            "page": "Motos"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/motos/index.html"
+    },
+    "catalogo.catalogo.motosNew": {
+        "url": "/motos/new",
+        "data": {
+            "section": "Motos",
+            "page": "Motos"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/motos/form.html"
+    },
+    "catalogo.catalogo.motosEdit": {
+        "url": "/motos/:id/edit",
+        "data": {
+            "section": "Motos",
+            "page": "Motos"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/motos/form.html"
+    }
+}, 
+
 ]);
