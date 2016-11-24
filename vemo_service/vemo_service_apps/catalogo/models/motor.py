@@ -19,4 +19,4 @@ class Motor(models.Model):
         verbose_name_plural = "Motores"
 
     def __str__(self):
-        return " %s " % (self.motor)
+        return " %s " % (self.marca)

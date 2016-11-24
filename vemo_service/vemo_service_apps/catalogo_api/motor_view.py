@@ -9,10 +9,9 @@ class MotorSerializer(serializers.ModelSerializer):
     #     source='motor.marca')
 
     class Meta:
-
-        fields = '__all__'
+        
         model = Motor
-
+        fields = '__all__'
 
 class MotorViewSet(viewsets.ModelViewSet):
     queryset = Motor.objects.all()

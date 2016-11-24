@@ -273,6 +273,31 @@ app.constant('ROUTERS', [{
         },
         "templateUrl": "vemo_web_apps/catalogo_web/views/motos/form.html"
     }
-}, 
+},{
+    "catalogo.catalogo.repuesto":  {
+        "url": "/repuestos",
+        "data": {
+            "section": "Repuestos",
+            "page": "Repuestos"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/repuestos/index.html"
+    },
+    "catalogo.catalogo.repuestosNew": {
+        "url": "/repuestos/new",
+        "data": {
+            "section": "Repuestos",
+            "page": "Repuestos"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/repuestos/form.html"
+    },
+    "catalogo.catalogo.repuestosEdit": {
+        "url": "/repuestos/:id/edit",
+        "data": {
+            "section": "Repuestos",
+            "page": "Repuestos"
+        },
+        "templateUrl": "vemo_web_apps/catalogo_web/views/repuestos/form.html"
+    }
+},
 
 ]);
