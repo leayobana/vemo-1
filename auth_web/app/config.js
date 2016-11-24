@@ -3,8 +3,8 @@ var loginUrl = 'http://localhost:9001/auth_web/';
 var iotecaUrl = 'http://localhost:9001/vemo_web/';
 
 
-var clientId = 'gyEJ310NDKMKrYvOMbwSnu9UFkJkXE5E48dCLRZK';
-var clientSecret = 'lBiNhIo5JSf3mimVkDY2W4nABSGeAQhgmYVaWc7WHmrvZBHitBuEWm0GlaNhpOUfUVkGvFd8hKdlXtYqJTgRFZIEVgiwTwv7bZesAN3TOK39dumLoPlOQdIiHyIwr7ht';
+var clientId = 'UMsRRWv7OTz0O26Z7OjRE7NvzxYWtNBGVDXGs4d4';
+var clientSecret = 'IciugaunK2qMNYVRl4CCn7zAddCsLkvtIe80P8chhfTOHnDDOICEqTnWJ3zfKvq9G2tH5cHgkDkGwHZsHC2502bMHsf35kjhJVcJb4fd1MK1TthSYMaVAiQG5Z3AQgNe';
 var grantType = 'password';
 
 var config = {
