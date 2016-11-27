@@ -5,7 +5,7 @@ app
 
     // config
     $scope.app = {
-        name: 'AUTH',
+        name: 'VEMO',
         version: '1.0.1',
 
         setting: {
