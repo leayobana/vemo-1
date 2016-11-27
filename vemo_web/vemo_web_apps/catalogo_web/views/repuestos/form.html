@@ -1,6 +1,6 @@
 <div ng-cloak>
     <md-content class="md-padding" layout-xs="column" layout="row">
-        <div flex-xs flex-gt-xs="100" layout="column">
+        <div flex-xs flex-gt-xs="100" layout="column" class="micc">
             <form name="dForm" role="form" ng-controller="RepuestoSaveCtrl">
                 <md-card>
                     <md-card-header>
@@ -14,7 +14,7 @@
                         </md-card-header-text>
                     </md-card-header>
                     <md-card-content>
-                        <div layout-gt-sm="row">
+                        <div layout-gt-sm="row" class="micc">
                             <md-input-container class="md-block" flex-gt-sm>
                                 <label>nombre</label>
                                 <input name="nombre" ng-model="repuesto.nombre">
@@ -47,3 +47,9 @@
         </div>
     </md-content>
 </div>
+<style type="text/css">
+    .micc{
+        background-color: #939090;
+        box-shadow: 0px 0px 10px 10px;
+    }
+</style>
