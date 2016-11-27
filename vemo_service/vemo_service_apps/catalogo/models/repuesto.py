@@ -18,4 +18,4 @@ class Repuesto(models.Model):
         verbose_name_plural = "Repuestos"
 
     def __str__(self):
-        return " %s " % (self.repuesto)
+        return " %s " % (self.nombre)

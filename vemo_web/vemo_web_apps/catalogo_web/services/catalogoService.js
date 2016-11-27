@@ -21,6 +21,11 @@ app
             "update": { method: 'PUT' },
 
         }),
+
+        Repuesto: $resource(url + "repuesto/:id/", { 'id': '@id' }, {
+            "update": { method: 'PUT' },
+
+        }),
         
         Autor: $resource(url + "autors/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },

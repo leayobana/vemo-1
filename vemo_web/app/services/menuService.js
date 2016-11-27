@@ -110,6 +110,10 @@ app
                 title: 'MOTOS',
                 state: 'catalogo.catalogo.moto',
                 type: 'link'
+            },{
+                title: 'REPUESTOS',
+                state: 'catalogo.catalogo.repuesto',
+                type: 'link'
             },]
         }]
     });
