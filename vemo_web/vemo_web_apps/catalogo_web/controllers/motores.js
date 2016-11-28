@@ -72,7 +72,7 @@ app
             catalogoService.Motor.update({ id: $scope.motor.id }, $scope.motor, function(r) {
                 $log.log("r: " + JSON.stringify(r));
                 toastr.success('Se editó Motor ' + r.marca, 'Motor');
-                $state.go('catalogo.catalogo.motores');
+                $state.go('catalogo.catalogo.motor');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -81,7 +81,7 @@ app
             catalogoService.Motor.save($scope.motor, function(r) {
                 $log.log("r: " + JSON.stringify(r));
                 toastr.success('Se insertó motor ' + r.marca, 'Motor');
-                $state.go('catalogo.catalogo.motores');
+                $state.go('catalogo.catalogo.motor');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -90,7 +90,7 @@ app
     };
 
     $scope.cancel = function() {
-        $state.go('catalogo.catalogo.motores');
+        $state.go('catalogo.catalogo.motor');
 
 
         

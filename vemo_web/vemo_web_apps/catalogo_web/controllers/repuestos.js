@@ -72,7 +72,7 @@ app
             catalogoService.Repuesto.update({ id: $scope.repuesto.id }, $scope.repuesto, function(r) {
                 $log.log("r: " + JSON.stringify(r));
                 toastr.success('Se editó Repuesto ' + r.nombre, 'Repuesto');
-                $state.go('catalogo.catalogo.repuestos');
+                $state.go('catalogo.catalogo.repuesto');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -90,7 +90,7 @@ app
     };
 
     $scope.cancel = function() {
-        $state.go('catalogo.catalogo.repuestos');
+        $state.go('catalogo.catalogo.repuesto');
 
 
         
