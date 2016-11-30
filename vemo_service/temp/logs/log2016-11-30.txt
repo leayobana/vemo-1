@@ -58,3 +58,13 @@
 [2016-11-30 11:59:49] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
 [2016-11-30 12:00:11] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
 [2016-11-30 12:00:54] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-30 12:20:56] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-30 12:21:12] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-30 12:21:52] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-30 12:22:22] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-30 12:22:47] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-30 12:23:31] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-30 12:23:56] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-30 12:24:50] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-30 12:26:24] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-30 12:26:47] [INFO] [vemo_service_apps.auths_api.user_view:79] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
