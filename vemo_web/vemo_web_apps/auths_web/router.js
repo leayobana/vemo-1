@@ -1,18 +1,10 @@
 app
 
-//==================================
-// auths routers
-//==================================
     .config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
 
 
-
-
-    //==================================
-    // auths layout base
-    //==================================
         .state('auths', {
         url: '/auths',
         views: {
@@ -28,28 +20,17 @@ app
         }
 
     })
-
-    //==================================
-    // auths system page
-    //==================================
     .state('auths.system', {
         url: '/system',
         template: '<div ui-view ></div>'
     })
 
-
-    //==================================
-    // url ct
-    //==================================
     .state("auths.system.ct", {
         url: "/ct",
         data: { section: 'System', page: 'Document' },
         templateUrl: "app/views/pages/document.html"
     })
 
-    //==================================
-    // url hierarchy
-    //==================================
     .state('auths.hierarchy', {
         url: '/hierarchy',
         template: '<div ui-view ></div>'
@@ -78,9 +59,6 @@ app
         templateUrl: "vemo_web_apps/auths_web/views/log/index.html"
     })
 
-    //==================================
-    // url Menú
-    //==================================
 
     .state("auths.system.menu", {
         url: "/menu",
@@ -88,12 +66,8 @@ app
         templateUrl: "vemo_web_apps/auths_web/views/menu/index.html",
 
         settings: {
-            //loginRequired: true,
-            //roles: ['User'],
-
         },
         resolve: {
-            //checkSecurity: checkSecurity,
         },
     });
 

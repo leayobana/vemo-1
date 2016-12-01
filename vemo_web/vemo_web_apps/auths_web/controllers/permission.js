@@ -4,7 +4,6 @@ app
 
     .controller("PermissionCtrl", function($scope, authsService, $window, $stateParams, $mdDialog, $log, toastr) {
 
-    //Valores iniciales
     $scope.fields = 'name,codename';
     var params = {};
     $scope.lista = [];
@@ -39,19 +38,6 @@ app
         console.log('Order: ' + order);
     };
 
-
-    /*
-    <md-button class="md-button" aria-label="Mostrar todo" ng-click="listAll()">
-                            Mostrar todo
-                        </md-button>
-
-    $scope.listAll = function() {
-        params.all = true; //así debe quedar
-        $scope.list(params);
-    };
-    */
-
-    //mdDialog
     $scope.cancel = function() {
         $mdDialog.cancel();
     };
@@ -72,8 +58,6 @@ app
         }, function() {});
     };
 
-    //end mdDialog
-
     $scope.sel = function(d) {
         $scope.permission = authsService.Permission.get({ id: d.id });
         $mdDialog.show({
@@ -93,7 +77,6 @@ app
 
             authsService.Permission.update({ id: $scope.permission.id }, $scope.permission).$promise.then(function(r) {
                 console.log("r: " + r);
-                //$scope.list();
                 $mdDialog.hide();
             }, function(err) {
                 console.log("Err " + err);
@@ -101,7 +84,6 @@ app
         } else {
             authsService.Permission.save($scope.permission).$promise.then(function(r) {
                 console.log("r: " + r);
-                //$scope.list();
                 $mdDialog.hide();
             }, function(err) {
                 console.log("Err " + err);

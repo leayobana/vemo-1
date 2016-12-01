@@ -8,9 +8,6 @@ app
             "update": { method: 'PUT' },
 
         }),
-        Cliente: $resource(url + "cliente/:id/", { 'id': '@id' }, {
-            "update": { method: 'PUT' },
-        }),
 
         Motor: $resource(url + "motor/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },

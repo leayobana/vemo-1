@@ -1,17 +1,7 @@
-/**
- * Util functions for AngularJS
- * @version v0.0.1 (15.02.2016)
- * asullom (c) 2016 Devhres Team
- * License: MIT
- */
-
 var ngDevhres = angular.module("ngDevhres", []);
 
 ngDevhres
 
-//==================================
-// Menu
-//==================================
     .directive('uiNav', ['$timeout', function($timeout) {
     return {
         restrict: 'AC',
@@ -26,9 +16,6 @@ ngDevhres
     };
 }])
 
-// =========================================================================
-// SUBMENU TOGGLE
-// =========================================================================
 .directive('toggleSubmenu', function($timeout) {
     return {
         restrict: 'A',
@@ -97,12 +84,6 @@ ngDevhres
             activado: '@'
         },
         templateUrl: 'directives/pagination/mi_pagination.html',
-        //template: '<ul>' +
-        //    '<li ng-repeat="ecq in Pagination" ng-class="ecq.myclase" ng-click="ecq.action()">' +
-        //    '<span ng-bind="ecq.value"></span>' +
-        //    '</li>' +
-        //    '</ul>' +
-        //    '',
     };
 
     function myLink(scope, el, attrs) {
@@ -223,7 +204,6 @@ ngDevhres
         var adj = (scope.adjacent * 2) + 2;
         var inicio, fin;
 
-        //agregarRango(scope);
         anteriorSiguente(scope, 'anterior');
         if (scope.pages <= (adj + 2)) {
             inicio = 1;
@@ -363,7 +343,7 @@ ngDevhres
             }
 
             function numPages() {
-                // return Math.ceil(scope.count / scope.per);
+
                 return scope.pages;
             }
 
@@ -379,7 +359,7 @@ ngDevhres
                 angular.extend(scope.nextParams, params);
 
                 scope.endParams = {};
-                scope.endParams.page = scope.pages; //numPages();
+                scope.endParams.page = scope.pages;
                 angular.extend(scope.endParams, params);
 
                 scope.prevParams = {};
@@ -390,9 +370,6 @@ ngDevhres
                 scope.startParams.page = 1;
                 angular.extend(scope.startParams, params);
 
-                //scope.count = parseInt(scope.count);
-                //scope.per = parseInt(scope.per);
-
                 scope.pagesInRange = calculatePagesInRange(parseInt(num));
 
                 var firstPageInRange = scope.pagesInRange[0];
@@ -400,12 +377,6 @@ ngDevhres
 
                 scope.firstPageInRange = calculatePagesInRange(parseInt(firstPageInRange.page) - 1);
                 scope.lastPageInRange = calculatePagesInRange(parseInt(lastPageInRange.page) + 1);
-                //scope.$state = $state;
-                //scope.currentPage = num;
-                //scope.pages = scope.pages; //numPages();
-                //scope.rango = scope.rango;
-
-                //scope.per=5;
             }
 
             setVariables();
@@ -492,7 +463,7 @@ ngDevhres
     }]);
 
 
-ngDevhres.directive("tableResponsive", function($compile, $filter) { //en construccion
+ngDevhres.directive("tableResponsive", function($compile, $filter) { 
     return {
         restrict: "A",
         compile: function(element, attrs) {
@@ -500,7 +471,6 @@ ngDevhres.directive("tableResponsive", function($compile, $filter) { //en constr
             var header_text = [];
             var header_order = [];
             var headers = element[0].querySelectorAll("table thead tr:first-child  > th");
-            //console.log("headers.length:" + headers.length);
             if (headers.length) {
                 var k = 0;
                 for (var i = 0; i < headers.length; i++) {
@@ -533,7 +503,6 @@ ngDevhres.directive("tableResponsive", function($compile, $filter) { //en constr
 
                             } else {
                                 header_text.push(current.textContent + ":");
-                                //console.warn("use thead ");
                             }
                         }
                     else {

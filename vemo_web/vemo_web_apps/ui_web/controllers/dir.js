@@ -12,16 +12,6 @@ app
 
     });
 
-/*
-Type    Usage
-A   <div book></div>
-C   <div class="book"></div>
-E   <book data="book_data"></book>
-M   <!- - directive:book - ->
-
-
-*/
-
 app
     .directive("likeBook", function() {
         return {
