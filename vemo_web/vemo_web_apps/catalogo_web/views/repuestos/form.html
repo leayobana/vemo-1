@@ -1,0 +1,55 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column" class="micc">
+            <form name="dForm" role="form" ng-controller="RepuestoSaveCtrl">
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/list/66.jpg" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Repuesto</span>
+                            <span class="md-subhead">repuesto</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row" class="micc">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>nombre</label>
+                                <input name="nombre" ng-model="repuesto.nombre">
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>codigo</label>
+                                <input name="codigo" ng-model="repuesto.codigo" required>
+                            </md-input-container>
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>descripcion</label>
+                                <input name="descripcion" ng-model="repuesto.descripcion" required>
+                            </md-input-container>
+                        </div>
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancel</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="repuesto.id == null">Create</span>
+                            <span ng-show="repuesto.id">Update</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>
+<style type="text/css">
+    .micc{
+        background-color: #939090;
+        box-shadow: 0px 0px 10px 10px;
+    }
+</style>

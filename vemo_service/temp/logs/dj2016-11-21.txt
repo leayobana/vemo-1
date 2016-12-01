@@ -1,0 +1,1560 @@
+[2016-11-21 09:46:58] DEBUG [django.db.backends:90] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-21 09:46:58] DEBUG [django.db.backends:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-21 09:47:15] DEBUG [django.db.backends:90] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-21 09:47:15] DEBUG [django.db.backends:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-21 09:47:36] DEBUG [django.db.backends:90] (0.032) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'nd7m0czwhdlw3kxto6qxmizwy1nzd65y' AND "django_session"."expire_date" > '2016-11-21 14:47:36.731795'); args=('nd7m0czwhdlw3kxto6qxmizwy1nzd65y', '2016-11-21 14:47:36.731795')
+[2016-11-21 09:47:36] DEBUG [django.db.backends:90] (0.013) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = '3651942c1384420da02bbf9e5eca3faa'; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-21 09:47:37] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'False': False, 'None': None}, {'request': <WSGIRequest: GET '/admin/'>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'ERROR': 40, 'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x04D05CF0>, 'user': <SimpleLazyObject: <User: admin>>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x049FD780>>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x048AE9F0>}, {}, {'site_url': '/', 'LANGUAGE_BIDI': False, 'has_permission': True, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CDAC70>, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CDAC10>, 'app_list': [{'models': [{'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04686830>, 'add_url': '/admin/auth/group/add/'}, {'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA22B0>, 'add_url': '/admin/auth/permission/add/'}], 'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CEF710>, 'app_label': 'auth', 'app_url': '/admin/auth/'}, {'models': [{'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04A39470>, 'add_url': '/admin/auths/hierarchytype/add/'}, {'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2E70>, 'add_url': '/admin/auths/hierarchy/add/'}, {'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2150>, 'add_url': '/admin/auths/menu/add/'}, {'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2510>, 'add_url': '/admin/auths/person/add/'}, {'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA24B0>, 'add_url': '/admin/auths/userhierarchygroup/add/'}, {'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2130>, 'add_url': '/admin/auths/userhierarchypermission/add/'}, {'object_name': 'User', 'admin_url': '/admin/auths/user/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA26D0>, 'add_url': '/admin/auths/user/add/'}], 'has_module_perms': True, 'name': 'Auths', 'app_label': 'auths', 'app_url': '/admin/auths/'}, {'models': [{'object_name': 'Autor', 'admin_url': '/admin/catalogo/autor/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Autores', 'add_url': '/admin/catalogo/autor/add/'}, {'object_name': 'Categoria', 'admin_url': '/admin/catalogo/categoria/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Categorias', 'add_url': '/admin/catalogo/categoria/add/'}, {'object_name': 'Libro', 'admin_url': '/admin/catalogo/libro/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Libros', 'add_url': '/admin/catalogo/libro/add/'}], 'has_module_perms': True, 'name': 'Catalogo', 'app_label': 'catalogo', 'app_url': '/admin/catalogo/'}, {'models': [{'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2A90>, 'add_url': '/admin/contenttypes/contenttype/add/'}], 'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CEF830>, 'app_label': 'contenttypes', 'app_url': '/admin/contenttypes/'}, {'models': [{'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2E30>, 'add_url': '/admin/oauth2_provider/accesstoken/add/'}, {'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2570>, 'add_url': '/admin/oauth2_provider/application/add/'}, {'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA28B0>, 'add_url': '/admin/oauth2_provider/grant/add/'}, {'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2A30>, 'add_url': '/admin/oauth2_provider/refreshtoken/add/'}], 'has_module_perms': True, 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider', 'app_url': '/admin/oauth2_provider/'}], 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CDACD0>, 'LANGUAGE_CODE': 'en-us', 'available_apps': [{'models': [{'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2350>, 'add_url': '/admin/auth/group/add/'}, {'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2110>, 'add_url': '/admin/auth/permission/add/'}], 'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CEF710>, 'app_label': 'auth', 'app_url': '/admin/auth/'}, {'models': [{'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA24D0>, 'add_url': '/admin/auths/hierarchytype/add/'}, {'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2AB0>, 'add_url': '/admin/auths/hierarchy/add/'}, {'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2FF0>, 'add_url': '/admin/auths/menu/add/'}, {'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA24F0>, 'add_url': '/admin/auths/person/add/'}, {'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2190>, 'add_url': '/admin/auths/userhierarchygroup/add/'}, {'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2530>, 'add_url': '/admin/auths/userhierarchypermission/add/'}, {'object_name': 'User', 'admin_url': '/admin/auths/user/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2C10>, 'add_url': '/admin/auths/user/add/'}], 'has_module_perms': True, 'name': 'Auths', 'app_label': 'auths', 'app_url': '/admin/auths/'}, {'models': [{'object_name': 'Autor', 'admin_url': '/admin/catalogo/autor/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Autores', 'add_url': '/admin/catalogo/autor/add/'}, {'object_name': 'Categoria', 'admin_url': '/admin/catalogo/categoria/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Categorias', 'add_url': '/admin/catalogo/categoria/add/'}, {'object_name': 'Libro', 'admin_url': '/admin/catalogo/libro/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Libros', 'add_url': '/admin/catalogo/libro/add/'}], 'has_module_perms': True, 'name': 'Catalogo', 'app_label': 'catalogo', 'app_url': '/admin/catalogo/'}, {'models': [{'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2890>, 'add_url': '/admin/contenttypes/contenttype/add/'}], 'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CEF830>, 'app_label': 'contenttypes', 'app_url': '/admin/contenttypes/'}, {'models': [{'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2710>, 'add_url': '/admin/oauth2_provider/accesstoken/add/'}, {'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2910>, 'add_url': '/admin/oauth2_provider/application/add/'}, {'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2690>, 'add_url': '/admin/oauth2_provider/grant/add/'}, {'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2CB0>, 'add_url': '/admin/oauth2_provider/refreshtoken/add/'}], 'has_module_perms': True, 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider', 'app_url': '/admin/oauth2_provider/'}]}]"
+[2016-11-21 09:47:37] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'False': False, 'None': None}, {'request': <WSGIRequest: GET '/admin/'>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'ERROR': 40, 'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25}, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x04D05CF0>, 'user': <SimpleLazyObject: <User: admin>>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x049FD780>>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x048AE9F0>}, {}, {'site_url': '/', 'LANGUAGE_BIDI': False, 'has_permission': True, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CDAC70>, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CDAC10>, 'app_list': [{'models': [{'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04686830>, 'add_url': '/admin/auth/group/add/'}, {'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA22B0>, 'add_url': '/admin/auth/permission/add/'}], 'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CEF710>, 'app_label': 'auth', 'app_url': '/admin/auth/'}, {'models': [{'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04A39470>, 'add_url': '/admin/auths/hierarchytype/add/'}, {'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2E70>, 'add_url': '/admin/auths/hierarchy/add/'}, {'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2150>, 'add_url': '/admin/auths/menu/add/'}, {'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2510>, 'add_url': '/admin/auths/person/add/'}, {'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA24B0>, 'add_url': '/admin/auths/userhierarchygroup/add/'}, {'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2130>, 'add_url': '/admin/auths/userhierarchypermission/add/'}, {'object_name': 'User', 'admin_url': '/admin/auths/user/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA26D0>, 'add_url': '/admin/auths/user/add/'}], 'has_module_perms': True, 'name': 'Auths', 'app_label': 'auths', 'app_url': '/admin/auths/'}, {'models': [{'object_name': 'Autor', 'admin_url': '/admin/catalogo/autor/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Autores', 'add_url': '/admin/catalogo/autor/add/'}, {'object_name': 'Categoria', 'admin_url': '/admin/catalogo/categoria/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Categorias', 'add_url': '/admin/catalogo/categoria/add/'}, {'object_name': 'Libro', 'admin_url': '/admin/catalogo/libro/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Libros', 'add_url': '/admin/catalogo/libro/add/'}], 'has_module_perms': True, 'name': 'Catalogo', 'app_label': 'catalogo', 'app_url': '/admin/catalogo/'}, {'models': [{'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2A90>, 'add_url': '/admin/contenttypes/contenttype/add/'}], 'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CEF830>, 'app_label': 'contenttypes', 'app_url': '/admin/contenttypes/'}, {'models': [{'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2E30>, 'add_url': '/admin/oauth2_provider/accesstoken/add/'}, {'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2570>, 'add_url': '/admin/oauth2_provider/application/add/'}, {'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA28B0>, 'add_url': '/admin/oauth2_provider/grant/add/'}, {'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2A30>, 'add_url': '/admin/oauth2_provider/refreshtoken/add/'}], 'has_module_perms': True, 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider', 'app_url': '/admin/oauth2_provider/'}], 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CDACD0>, 'LANGUAGE_CODE': 'en-us', 'available_apps': [{'models': [{'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2350>, 'add_url': '/admin/auth/group/add/'}, {'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2110>, 'add_url': '/admin/auth/permission/add/'}], 'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CEF710>, 'app_label': 'auth', 'app_url': '/admin/auth/'}, {'models': [{'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA24D0>, 'add_url': '/admin/auths/hierarchytype/add/'}, {'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2AB0>, 'add_url': '/admin/auths/hierarchy/add/'}, {'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2FF0>, 'add_url': '/admin/auths/menu/add/'}, {'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA24F0>, 'add_url': '/admin/auths/person/add/'}, {'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2190>, 'add_url': '/admin/auths/userhierarchygroup/add/'}, {'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2530>, 'add_url': '/admin/auths/userhierarchypermission/add/'}, {'object_name': 'User', 'admin_url': '/admin/auths/user/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2C10>, 'add_url': '/admin/auths/user/add/'}], 'has_module_perms': True, 'name': 'Auths', 'app_label': 'auths', 'app_url': '/admin/auths/'}, {'models': [{'object_name': 'Autor', 'admin_url': '/admin/catalogo/autor/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Autores', 'add_url': '/admin/catalogo/autor/add/'}, {'object_name': 'Categoria', 'admin_url': '/admin/catalogo/categoria/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Categorias', 'add_url': '/admin/catalogo/categoria/add/'}, {'object_name': 'Libro', 'admin_url': '/admin/catalogo/libro/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': 'Libros', 'add_url': '/admin/catalogo/libro/add/'}], 'has_module_perms': True, 'name': 'Catalogo', 'app_label': 'catalogo', 'app_url': '/admin/catalogo/'}, {'models': [{'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2890>, 'add_url': '/admin/contenttypes/contenttype/add/'}], 'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03CEF830>, 'app_label': 'contenttypes', 'app_url': '/admin/contenttypes/'}, {'models': [{'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2710>, 'add_url': '/admin/oauth2_provider/accesstoken/add/'}, {'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2910>, 'add_url': '/admin/oauth2_provider/application/add/'}, {'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2690>, 'add_url': '/admin/oauth2_provider/grant/add/'}, {'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'perms': {'delete': True, 'change': True, 'add': True}, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04CA2CB0>, 'add_url': '/admin/oauth2_provider/refreshtoken/add/'}], 'has_module_perms': True, 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider', 'app_url': '/admin/oauth2_provider/'}]}]"
+[2016-11-21 09:47:37] DEBUG [django.db.backends:90] (0.012) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auths_user" ON ("django_admin_log"."user_id" = "auths_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = '3651942c1384420da02bbf9e5eca3faa' ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-21 09:47:37] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 10333
+[2016-11-21 09:47:38] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2016-11-21 09:47:38] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2016-11-21 09:47:38] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[2016-11-21 09:47:38] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2016-11-21 09:47:38] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2016-11-21 09:47:38] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[2016-11-21 09:47:38] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[2016-11-21 09:47:38] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\\\vemo\\\\ve_vemo\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'D:\\\\vemo\\\\ve_vemo\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\\\vemo\\\\ve_vemo\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\\\vemo\\\\vemo_service\\\\vemo_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\\\vemo\\\\vemo_service\\\\vemo_service_apps\\\\catalogo_api\\\\urls.py'> (None:None) ^api/catalogo/>"
+[2016-11-21 09:47:38] WARNING [django.request:152] Not Found: /favicon.ico
+[2016-11-21 09:47:38] WARNING [django.server:131] "GET /favicon.ico HTTP/1.1" 404 2488
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\\\vemo\\\\ve_vemo\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'D:\\\\vemo\\\\ve_vemo\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\\\vemo\\\\ve_vemo\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\\\vemo\\\\vemo_service\\\\vemo_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-11-21 09:47:38] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\vemo\\ve_vemo\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'vemo_service_apps.auths_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\vemo\\vemo_service\\vemo_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'vemo_service_apps.catalogo_api.urls' from 'D:\\\\vemo\\\\vemo_service\\\\vemo_service_apps\\\\catalogo_api\\\\urls.py'> (None:None) ^api/catalogo/>"
+[2016-11-21 09:47:38] WARNING [django.request:152] Not Found: /favicon.ico
+[2016-11-21 09:47:38] WARNING [django.server:131] "GET /favicon.ico HTTP/1.1" 404 2488
+[2016-11-21 09:47:43] DEBUG [django.db.backends:90] (0.003) SELECT "auths_menu"."router_json" FROM "auths_menu" ORDER BY "auths_menu"."pos" ASC; args=()
+[2016-11-21 09:47:43] INFO [django.server:131] "GET /api/auths/routers/ HTTP/1.1" 200 2
+[2016-11-21 09:47:50] DEBUG [django.db.backends:90] (0.005) SELECT "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_application" WHERE "oauth2_provider_application"."client_id" = 'gyEJ310NDKMKrYvOMbwSnu9UFkJkXE5E48dCLRZK'; args=('gyEJ310NDKMKrYvOMbwSnu9UFkJkXE5E48dCLRZK',)
+[2016-11-21 09:47:50] DEBUG [django.db.backends:90] (0.000) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."username" = 'admin'; args=('admin',)
+[2016-11-21 09:47:50] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:47:50] DEBUG [django.db.backends:90] (0.085) INSERT INTO "oauth2_provider_accesstoken" ("user_id", "token", "application_id", "expires", "scope") VALUES ('3651942c1384420da02bbf9e5eca3faa', 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1', 1, '2016-11-22 00:47:50.323873', 'write read'); args=['3651942c1384420da02bbf9e5eca3faa', 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1', 1, '2016-11-22 00:47:50.323873', 'write read']
+[2016-11-21 09:47:50] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:47:50] DEBUG [django.db.backends:90] (0.007) INSERT INTO "oauth2_provider_refreshtoken" ("user_id", "token", "application_id", "access_token_id") VALUES ('3651942c1384420da02bbf9e5eca3faa', '2j5Hn7nAToWr5XXNLqN38seNx4lJ4L', 1, 25); args=['3651942c1384420da02bbf9e5eca3faa', '2j5Hn7nAToWr5XXNLqN38seNx4lJ4L', 1, 25]
+[2016-11-21 09:47:50] INFO [django.server:131] "POST /o/token/ HTTP/1.1" 200 169
+[2016-11-21 09:47:52] INFO [django.server:131] "OPTIONS /api/auths/localuserinfo/ HTTP/1.1" 200 0
+[2016-11-21 09:47:52] INFO [django.server:131] "OPTIONS /api/auths/usermenu/ HTTP/1.1" 200 0
+[2016-11-21 09:47:53] DEBUG [django.db.backends:90] (0.003) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:47:53] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:47:53] DEBUG [django.db.backends:90] (0.001) SELECT "auths_menu"."id" FROM "auths_menu" WHERE ("auths_menu"."id" IS NOT NULL AND "auths_menu"."is_active" = 1 AND "auths_menu"."module" = 'BACKEND') ORDER BY "auths_menu"."pos" ASC; args=(True, 'BACKEND')
+[2016-11-21 09:47:53] DEBUG [django.db.backends:90] (0.001) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" INNER JOIN "auths_user_groups" ON ("auth_group"."id" = "auths_user_groups"."group_id") WHERE "auths_user_groups"."user_id" = '3651942c1384420da02bbf9e5eca3faa'; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-21 09:47:53] DEBUG [django.db.backends:90] (0.001) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auths_user_user_permissions" ON ("auth_permission"."id" = "auths_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auths_user_user_permissions"."user_id" = '3651942c1384420da02bbf9e5eca3faa' ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-21 09:47:53] INFO [django.server:131] "GET /api/auths/localuserinfo/ HTTP/1.1" 200 496
+[2016-11-21 09:47:53] DEBUG [django.db.backends:90] (0.025) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '9fs6jk2e68nvuy7a1f1khvc4evakvqdb' LIMIT 1; args=('9fs6jk2e68nvuy7a1f1khvc4evakvqdb',)
+[2016-11-21 09:47:53] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:47:53] DEBUG [django.db.backends:90] (0.029) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '9fs6jk2e68nvuy7a1f1khvc4evakvqdb', 'NmE3M2Q3NmYwOTU3YjJmZDBjYmQxYTVjODc5MTExNzM3NjY1YzYzNzp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-21 14:48:23.419135'; args=('9fs6jk2e68nvuy7a1f1khvc4evakvqdb', 'NmE3M2Q3NmYwOTU3YjJmZDBjYmQxYTVjODc5MTExNzM3NjY1YzYzNzp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-21 14:48:23.419135')
+[2016-11-21 09:47:53] INFO [django.server:131] "GET /api/auths/usermenu/ HTTP/1.1" 200 11
+[2016-11-21 09:48:03] INFO [django.server:131] "OPTIONS /api/catalogo/motor/ HTTP/1.1" 200 0
+[2016-11-21 09:48:03] DEBUG [django.db.backends:90] (0.006) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:48:03] DEBUG [django.db.backends:90] (0.017) SELECT "catalogo_motor"."id", "catalogo_motor"."serie", "catalogo_motor"."tipoMotor", "catalogo_motor"."marca", "catalogo_motor"."descripcion" FROM "catalogo_motor"; args=()
+[2016-11-21 09:48:03] INFO [django.server:131] "GET /api/catalogo/motor/ HTTP/1.1" 200 2
+[2016-11-21 09:48:05] INFO [django.server:131] "OPTIONS /api/catalogo/moto/ HTTP/1.1" 200 0
+[2016-11-21 09:48:05] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:48:05] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto"; args=()
+[2016-11-21 09:48:05] INFO [django.server:131] "GET /api/catalogo/moto/ HTTP/1.1" 200 2
+[2016-11-21 09:48:16] DEBUG [django.db.backends:90] (0.003) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:48:16] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_motor"."id", "catalogo_motor"."serie", "catalogo_motor"."tipoMotor", "catalogo_motor"."marca", "catalogo_motor"."descripcion" FROM "catalogo_motor"; args=()
+[2016-11-21 09:48:16] INFO [django.server:131] "GET /api/catalogo/motor/ HTTP/1.1" 200 2
+[2016-11-21 09:48:19] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:48:19] DEBUG [django.db.backends:90] (0.001) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto"; args=()
+[2016-11-21 09:48:19] INFO [django.server:131] "GET /api/catalogo/moto/ HTTP/1.1" 200 2
+[2016-11-21 09:48:33] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:48:33] DEBUG [django.db.backends:90] (0.001) BEGIN; args=None
+[2016-11-21 09:48:33] DEBUG [django.db.backends:90] (0.000) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT '507cb72dfa874fd8a1af9b2c113fdff3', 'Michael', 'sdcsdc', 'sdgdfg', 'wefwefwe'; args=('507cb72dfa874fd8a1af9b2c113fdff3', 'Michael', 'sdcsdc', 'sdgdfg', 'wefwefwe')
+[2016-11-21 09:48:33] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:48:33] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:48:33] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:48:33] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20300
+[2016-11-21 09:48:34] DEBUG [django.db.backends:90] (0.007) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:48:34] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:48:34] DEBUG [django.db.backends:90] (0.000) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT 'd8577954ace84773beb95f9024d083fb', 'Michael', 'sdcsdc', 'sdgdfg', 'wefwefwe'; args=('d8577954ace84773beb95f9024d083fb', 'Michael', 'sdcsdc', 'sdgdfg', 'wefwefwe')
+[2016-11-21 09:48:34] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:48:34] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:48:34] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:48:34] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
+[2016-11-21 09:48:47] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:48:47] DEBUG [django.db.backends:90] (0.003) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:48:48] DEBUG [django.db.backends:90] (0.001) SELECT "auths_menu"."id" FROM "auths_menu" WHERE ("auths_menu"."id" IS NOT NULL AND "auths_menu"."is_active" = 1 AND "auths_menu"."module" = 'BACKEND') ORDER BY "auths_menu"."pos" ASC; args=(True, 'BACKEND')
+[2016-11-21 09:48:48] DEBUG [django.db.backends:90] (0.001) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" INNER JOIN "auths_user_groups" ON ("auth_group"."id" = "auths_user_groups"."group_id") WHERE "auths_user_groups"."user_id" = '3651942c1384420da02bbf9e5eca3faa'; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-21 09:48:48] DEBUG [django.db.backends:90] (0.000) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auths_user_user_permissions" ON ("auth_permission"."id" = "auths_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auths_user_user_permissions"."user_id" = '3651942c1384420da02bbf9e5eca3faa' ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-21 09:48:48] INFO [django.server:131] "GET /api/auths/localuserinfo/ HTTP/1.1" 200 496
+[2016-11-21 09:48:48] DEBUG [django.db.backends:90] (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 's25w1dknw66wz4qyobeianhfywquo5n7' LIMIT 1; args=('s25w1dknw66wz4qyobeianhfywquo5n7',)
+[2016-11-21 09:48:48] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:48:48] DEBUG [django.db.backends:90] (0.038) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 's25w1dknw66wz4qyobeianhfywquo5n7', 'NmE3M2Q3NmYwOTU3YjJmZDBjYmQxYTVjODc5MTExNzM3NjY1YzYzNzp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-21 14:49:18.682815'; args=('s25w1dknw66wz4qyobeianhfywquo5n7', 'NmE3M2Q3NmYwOTU3YjJmZDBjYmQxYTVjODc5MTExNzM3NjY1YzYzNzp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-21 14:49:18.682815')
+[2016-11-21 09:48:49] INFO [django.server:131] "GET /api/auths/usermenu/ HTTP/1.1" 200 11
+[2016-11-21 09:49:14] DEBUG [django.db.backends:90] (0.008) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:49:14] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:49:14] DEBUG [django.db.backends:90] (0.000) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT 'bec12fe1eca3431ebbf5d630c64db6ba', 'Michael', 'normal', 'f250', 'pontente'; args=('bec12fe1eca3431ebbf5d630c64db6ba', 'Michael', 'normal', 'f250', 'pontente')
+[2016-11-21 09:49:14] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:49:14] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:14] DEBUG [django.db.backends:90] (0.001) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:14] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.006) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.001) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT '56314267cc224f2f8fa44f0addf429ab', 'Michael', 'normal', 'f250', 'pontente'; args=('56314267cc224f2f8fa44f0addf429ab', 'Michael', 'normal', 'f250', 'pontente')
+[2016-11-21 09:49:17] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.002) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:17] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.013) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.004) BEGIN; args=None
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.003) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT 'fd432a01d4114e8c9c9514a6eb9c7eca', 'Michael', 'normal', 'f250', 'pontente'; args=('fd432a01d4114e8c9c9514a6eb9c7eca', 'Michael', 'normal', 'f250', 'pontente')
+[2016-11-21 09:49:17] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.008) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:17] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.004) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT '8ac2cb3d89f14b1f9525f60bed5aac89', 'Michael', 'normal', 'f250', 'pontente'; args=('8ac2cb3d89f14b1f9525f60bed5aac89', 'Michael', 'normal', 'f250', 'pontente')
+[2016-11-21 09:49:17] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.003) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.001) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:17] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.007) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.001) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT '8bc428a8586a48c99bcaea458f49648b', 'Michael', 'normal', 'f250', 'pontente'; args=('8bc428a8586a48c99bcaea458f49648b', 'Michael', 'normal', 'f250', 'pontente')
+[2016-11-21 09:49:17] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:17] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:18] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.000) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT '724abe3fb28e4e2db4c791ff67060c3f', 'Michael', 'normal', 'f250', 'pontente'; args=('724abe3fb28e4e2db4c791ff67060c3f', 'Michael', 'normal', 'f250', 'pontente')
+[2016-11-21 09:49:19] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.001) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.001) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.003) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.000) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT 'cabb00a0cc57484cb6a8010d70af66e8', 'Michael', 'normal', 'f250', 'pontente'; args=('cabb00a0cc57484cb6a8010d70af66e8', 'Michael', 'normal', 'f250', 'pontente')
+[2016-11-21 09:49:19] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:49:19] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.000) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT 'a095fc3369104cb9959a90cf16af49c7', 'Michael', 'normal', 'f250', 'pontente'; args=('a095fc3369104cb9959a90cf16af49c7', 'Michael', 'normal', 'f250', 'pontente')
+[2016-11-21 09:49:19] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:19] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:20] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
+[2016-11-21 09:49:20] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
+[2016-11-21 09:49:20] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 09:49:20] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:49:20] DEBUG [django.db.backends:90] (0.001) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT '6621a7d45e684532b7d8896a5b98c554', 'Michael', 'normal', 'f250', 'pontente'; args=('6621a7d45e684532b7d8896a5b98c554', 'Michael', 'normal', 'f250', 'pontente')
+[2016-11-21 09:49:20] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 09:49:20] DEBUG [django.db.backends:90] (0.001) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:20] DEBUG [django.db.backends:90] (0.001) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 09:49:20] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20300
+[2016-11-21 09:51:49] DEBUG [django.db.backends:90] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-21 09:51:49] DEBUG [django.db.backends:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-21 09:52:05] DEBUG [django.db.backends:90] (0.016) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-21 09:52:05] DEBUG [django.db.backends:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-21 09:52:05] DEBUG [django.db.backends:90] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-21 09:52:05] DEBUG [django.db.backends:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-21 09:52:05] DEBUG [django.db.backends:90] (0.000) PRAGMA foreign_keys; args=None
+[2016-11-21 09:52:05] DEBUG [django.db.backends:90] (0.000) PRAGMA foreign_keys = 0; args=None
+[2016-11-21 09:52:05] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 09:52:05] DEBUG [django.db.backends.schema:103] CREATE TABLE "catalogo_motor" ("id" char(32) NOT NULL PRIMARY KEY, "serie" varchar(60) NULL, "tipoMotor" varchar(60) NULL, "marca" varchar(60) NULL, "descripcion" varchar(60) NULL); (params None)
+[2016-11-21 09:52:05] DEBUG [django.db.backends:90] (0.000) CREATE TABLE "catalogo_motor" ("id" char(32) NOT NULL PRIMARY KEY, "serie" varchar(60) NULL, "tipoMotor" varchar(60) NULL, "marca" varchar(60) NULL, "descripcion" varchar(60) NULL); args=None
+[2016-11-21 09:52:05] DEBUG [django.db.backends:90] (0.000) PRAGMA foreign_keys = 0; args=None
+[2016-11-21 09:57:35] DEBUG [django.db.backends:90] (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-21 09:57:35] DEBUG [django.db.backends:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-21 10:00:21] DEBUG [django.db.backends:90] (0.000) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 10:00:21] DEBUG [django.db.backends:90] (0.000) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 10:00:21] DEBUG [django.db.backends:90] (0.016) SELECT "auths_menu"."id" FROM "auths_menu" WHERE ("auths_menu"."id" IS NOT NULL AND "auths_menu"."module" = 'BACKEND' AND "auths_menu"."is_active" = 1) ORDER BY "auths_menu"."pos" ASC; args=('BACKEND', True)
+[2016-11-21 10:00:21] DEBUG [django.db.backends:90] (0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'q9twhcksjq1o62jsm6xdcfxxcfb4tf6v' LIMIT 1; args=('q9twhcksjq1o62jsm6xdcfxxcfb4tf6v',)
+[2016-11-21 10:00:21] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 10:00:21] DEBUG [django.db.backends:90] (0.016) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" INNER JOIN "auths_user_groups" ON ("auth_group"."id" = "auths_user_groups"."group_id") WHERE "auths_user_groups"."user_id" = '3651942c1384420da02bbf9e5eca3faa'; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-21 10:00:21] DEBUG [django.db.backends:90] (0.000) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auths_user_user_permissions" ON ("auth_permission"."id" = "auths_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auths_user_user_permissions"."user_id" = '3651942c1384420da02bbf9e5eca3faa' ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-21 10:00:21] INFO [django.server:131] "GET /api/auths/localuserinfo/ HTTP/1.1" 200 496
+[2016-11-21 10:00:21] DEBUG [django.db.backends:90] (0.047) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'q9twhcksjq1o62jsm6xdcfxxcfb4tf6v', 'NmE3M2Q3NmYwOTU3YjJmZDBjYmQxYTVjODc5MTExNzM3NjY1YzYzNzp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-21 15:00:51.800070'; args=('q9twhcksjq1o62jsm6xdcfxxcfb4tf6v', 'NmE3M2Q3NmYwOTU3YjJmZDBjYmQxYTVjODc5MTExNzM3NjY1YzYzNzp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-21 15:00:51.800070')
+[2016-11-21 10:00:22] INFO [django.server:131] "GET /api/auths/usermenu/ HTTP/1.1" 200 11
+[2016-11-21 10:00:55] DEBUG [django.db.backends:90] (0.004) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 10:00:55] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 10:00:55] DEBUG [django.db.backends:90] (0.000) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT '4d36caa9ad7c4992b6d85ec4d04f7b8b', 'leaakm', 'moto', 'akm', 'muy baja'; args=('4d36caa9ad7c4992b6d85ec4d04f7b8b', 'leaakm', 'moto', 'akm', 'muy baja')
+[2016-11-21 10:00:55] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 10:00:56] DEBUG [django.db.backends:90] (0.001) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 10:00:56] DEBUG [django.db.backends:90] (0.000) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 10:00:56] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
+[2016-11-21 10:12:18] DEBUG [django.db.backends:90] (0.005) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-21 10:12:18] DEBUG [django.db.backends:90] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-21 10:13:44] INFO [django.server:131] "OPTIONS /api/auths/localuserinfo/ HTTP/1.1" 200 0
+[2016-11-21 10:13:44] INFO [django.server:131] "OPTIONS /api/auths/usermenu/ HTTP/1.1" 200 0
+[2016-11-21 10:13:44] DEBUG [django.db.backends:90] (0.000) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 10:13:44] DEBUG [django.db.backends:90] (0.000) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 10:13:44] DEBUG [django.db.backends:90] (0.001) SELECT "auths_menu"."id" FROM "auths_menu" WHERE ("auths_menu"."id" IS NOT NULL AND "auths_menu"."is_active" = 1 AND "auths_menu"."module" = 'BACKEND') ORDER BY "auths_menu"."pos" ASC; args=(True, 'BACKEND')
+[2016-11-21 10:13:44] DEBUG [django.db.backends:90] (0.001) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'ucqu5jt1aqr0bzojf8mxk45mfyyuqedu' LIMIT 1; args=('ucqu5jt1aqr0bzojf8mxk45mfyyuqedu',)
+[2016-11-21 10:13:44] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 10:13:44] DEBUG [django.db.backends:90] (0.018) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'ucqu5jt1aqr0bzojf8mxk45mfyyuqedu', 'NmE3M2Q3NmYwOTU3YjJmZDBjYmQxYTVjODc5MTExNzM3NjY1YzYzNzp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-21 15:14:14.296159'; args=('ucqu5jt1aqr0bzojf8mxk45mfyyuqedu', 'NmE3M2Q3NmYwOTU3YjJmZDBjYmQxYTVjODc5MTExNzM3NjY1YzYzNzp7Il9zZXNzaW9uX2V4cGlyeSI6MzB9', '2016-11-21 15:14:14.296159')
+[2016-11-21 10:13:44] DEBUG [django.db.backends:90] (0.001) SELECT "auth_group"."id", "auth_group"."name" FROM "auth_group" INNER JOIN "auths_user_groups" ON ("auth_group"."id" = "auths_user_groups"."group_id") WHERE "auths_user_groups"."user_id" = '3651942c1384420da02bbf9e5eca3faa'; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-21 10:13:44] INFO [django.server:131] "GET /api/auths/usermenu/ HTTP/1.1" 200 11
+[2016-11-21 10:13:44] DEBUG [django.db.backends:90] (0.123) SELECT "auth_permission"."id", "auth_permission"."name", "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "auths_user_user_permissions" ON ("auth_permission"."id" = "auths_user_user_permissions"."permission_id") INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auths_user_user_permissions"."user_id" = '3651942c1384420da02bbf9e5eca3faa' ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=('3651942c1384420da02bbf9e5eca3faa',)
+[2016-11-21 10:13:44] INFO [django.server:131] "GET /api/auths/localuserinfo/ HTTP/1.1" 200 496
+[2016-11-21 10:14:37] DEBUG [django.db.backends:90] (0.005) SELECT "oauth2_provider_accesstoken"."id", "oauth2_provider_accesstoken"."user_id", "oauth2_provider_accesstoken"."token", "oauth2_provider_accesstoken"."application_id", "oauth2_provider_accesstoken"."expires", "oauth2_provider_accesstoken"."scope", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_accesstoken" LEFT OUTER JOIN "auths_user" ON ("oauth2_provider_accesstoken"."user_id" = "auths_user"."id") INNER JOIN "oauth2_provider_application" ON ("oauth2_provider_accesstoken"."application_id" = "oauth2_provider_application"."id") WHERE "oauth2_provider_accesstoken"."token" = 'ch8mooWGFtYrjZdFpBtiovpA0xLwc1'; args=('ch8mooWGFtYrjZdFpBtiovpA0xLwc1',)
+[2016-11-21 10:14:37] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-21 10:14:37] DEBUG [django.db.backends:90] (0.001) INSERT INTO "catalogo_moto" ("id", "nombre", "tipo", "motor", "descripcion") SELECT '6dff013d2cca4f66b4327ef39f9c2b2c', 'susuki', 'normal', 'f250', 'pontente'; args=('6dff013d2cca4f66b4327ef39f9c2b2c', 'susuki', 'normal', 'f250', 'pontente')
+[2016-11-21 10:14:37] ERROR [django.request:124] Internal Server Error: /api/catalogo/moto/
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: datatype mismatch
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\mixins.py", line 26, in perform_create
+    serializer.save()
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\rest_framework\serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\models\sql\compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\vemo\ve_vemo\lib\site-packages\django\db\backends\sqlite3\base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: datatype mismatch
+[2016-11-21 10:14:37] DEBUG [django.db.backends:90] (0.001) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 10:14:37] DEBUG [django.db.backends:90] (0.001) SELECT "catalogo_moto"."id", "catalogo_moto"."nombre", "catalogo_moto"."tipo", "catalogo_moto"."motor", "catalogo_moto"."descripcion" FROM "catalogo_moto" LIMIT 21; args=()
+[2016-11-21 10:14:37] ERROR [django.server:131] "POST /api/catalogo/moto/ HTTP/1.1" 500 20299
