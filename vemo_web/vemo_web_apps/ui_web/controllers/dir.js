@@ -1,6 +1,6 @@
 app
     .controller('xCtrl', function($scope) {
-        // configurar paginator
+
         $scope.qryPag = {
             limit: 5,
             offset: 0
